@@ -8,6 +8,7 @@ import { About } from '../About/About';
 import { ForUniversities } from '../ForUniversities/ForUniversities';
 import { ForInterns } from '../ForInterns/ForInterns';
 import { Contact } from '../Contact/Contact';
+import { BackendStatus } from '../BackendStatus';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
+      <BackendStatus />
     </div>
   )
 }

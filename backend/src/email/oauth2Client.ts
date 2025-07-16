@@ -9,6 +9,7 @@ const oauth2Client = new google.auth.OAuth2(
 );
 
 //Then we set the long-lived refresh token to the client.  This will generate new access tokens
+//this so that users dont have to log in every time
 
 oauth2Client.setCredentials({
   refresh_token: process.env.OAUTH_REFRESH_TOKEN!, 
