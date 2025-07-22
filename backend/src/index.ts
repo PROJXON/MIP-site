@@ -1,4 +1,5 @@
 import express from 'express';
+import 'dotenv/config';
 
 //middleware that enables CORS (Cross-Origin Resource Sharing)
 //allowing frontend to make requests to the backend

@@ -2,10 +2,11 @@ import { google } from "googleapis";
 
 //We get out OAuth2.0 Client with oauth2Client
 
+
 const oauth2Client = new google.auth.OAuth2(
   process.env.OAUTH_CLIENT_ID!,
   process.env.OAUTH_CLIENT_SECRET!,
-  "https://developers.google.com/oauthplayground" 
+ process.env.OAUTH_REDIRECT_URI || "https://developers.google.com/oauthplayground"
 );
 
 //Then we set the long-lived refresh token to the client.  This will generate new access tokens
