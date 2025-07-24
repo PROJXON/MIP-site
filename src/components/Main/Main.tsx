@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 
 export const Main: React.FC = () => {
   // For animated impact numbers
-  const metrics = [
+  const metrics = useMemo(() => [
     { label: "100+ Interns Trained" },
     { label: "92% Conversion" },
     { label: "15 Partner Campuses" },
     { label: "9 Industries" },
-  ];
+  ], []);
   const [showMetrics, setShowMetrics] = useState([false, false, false, false]);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ export const Main: React.FC = () => {
         });
       }, 400 * i);
     });
-  }, []);
+  }, [metrics]);
 
   return (
     <main className="flex-1 bg-gray-100">
