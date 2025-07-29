@@ -5,7 +5,7 @@ export const About: React.FC = () => {
     <div className="max-w-4xl mx-auto py-12 px-4 text-white">
       {/* Story Section */}
       <section className="mb-12">
-        <h2 className="text-3xl font-bold mb-4 text-yellow-400">Our Story</h2>
+        <h2 className="text-3xl font-bold mb-4 py-4 text-yellow-400">Our Story</h2>
         <p className="text-gray-300">
           PROJXON was founded with a vision to bridge the gap between academic
           learning and real-world experience. Our journey began when a group of
