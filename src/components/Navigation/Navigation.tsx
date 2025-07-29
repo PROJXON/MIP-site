@@ -24,20 +24,18 @@ export const Navigation: React.FC = () => {
 
   // Helper function for nav link classes
   const linkClass = (path: string) =>
-    `hover:text-yellow-400 transition ${
-      location.pathname === path ? "text-yellow-400" : ""
+    `hover:text-yellow-500 transition ${
+      location.pathname === path ? "text-yellow-500" : ""
     }`;
 
   return (
-    <nav className="relative w-full">
-      {/* Flex container for nav content */}
-      <div className="flex justify-end md:justify-between items-center w-full">
+<nav className="relative right-4">
+     <div className="flex items-center w-full max-w-screen-xl mx-auto">
         {/* --- Start mobile menu container --- */}
-        <div ref={menuContainerRef}>
-          {/* Hamburger button for mobile */}
+        <div ref={menuContainerRef} className="md:hidden">
           <button
             aria-label="Toggle navigation menu"
-            className="md:hidden p-2 focus:outline-none"
+            className="p-2 focus:outline-none"
             type="button"
           >
             <Hamburger
@@ -52,7 +50,7 @@ export const Navigation: React.FC = () => {
           {/* Mobile dropdown navigation */}
           {isOpen && (
             <ul
-              className="absolute top-full right-0 w-50 bg-black text-white flex flex-col space-y-2 p-4 md:hidden z-50 shadow-lg"
+              className="absolute top-full right-4 min-w-[12rem] bg-black text-white flex flex-col space-y-2 p-4 md:hidden z-50 shadow-lg transition-all duration-300"
             >
               <li>
                 <Link
@@ -103,7 +101,7 @@ export const Navigation: React.FC = () => {
           )}
         </div>
         {/* Desktop navigation */}
-        <ul className="hidden md:flex space-x-4 md:space-x-8 text-sm md:text-base font-medium">
+        <ul className="hidden md:flex space-x-4 md:space-x-8 text-sm md:text-base font-medium  p-4 ">
           <li>
             <Link to="/about" className={linkClass("/about")}>
               About

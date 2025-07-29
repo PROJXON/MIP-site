@@ -42,7 +42,7 @@ export function Contact(): JSX.Element {
 
   return (
     <div className="max-w-xl mx-auto py-12 px-4 text-white">
-      <h2 className="text-3xl font-bold mb-6 text-yellow-400">Contact Us</h2>
+      <h2 className="text-3xl font-bold mb-6 py-4 text-yellow-400">Contact Us</h2>
       <form
         ref={form}
         onSubmit={handleSubmit}
