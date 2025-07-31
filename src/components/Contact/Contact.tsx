@@ -25,9 +25,10 @@ export function Contact(): JSX.Element {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          to: "trangmtruong94@gmail.com", // Team email
+          to: "recruiting@projxon.com", //sends the form to projxon email //sens to the backend
           subject: `Contact Form Submission (${role})`,
           text: `From: ${email}\n\n${message}`,
+          userEmail: email, // Include user's email
         }),
       });
       const data = await response.json();

@@ -12,7 +12,7 @@ export const Footer: React.FC = () => {
               alt="PROJXON Logo"
               className="h-8 w-8 mr-2"
             />
-            <span className="text-xl text-yellow-500 font-bold tracking-wide">PROJXON</span>
+            <span className="text-sm text-yellow-500 font-bold tracking-wide">Powered by PROJXON</span>
           </div>
           <div className="flex space-x-4 text-gray-400 text-sm mb-1">
             <a href="/privacy" className="hover:text-yellow-400">Privacy Policy</a>
