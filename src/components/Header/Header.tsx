@@ -15,7 +15,7 @@ export const Header: React.FC = () => {
   }, []);
   return (
     <header className="fixed top-0 z-50 py-4 w-full border-b border-gray-800 bg-black px-4">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-12">
         <Link to="/" className="flex items-center">
           <div 
             className={`

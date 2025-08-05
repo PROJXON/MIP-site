@@ -1,0 +1,109 @@
+.navigation-nav {
+  position: relative;
+  background: #000;
+  z-index: 1000; 
+}
+
+.navigation-container {
+  max-width: 1280px; 
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;  
+  padding-right: 1.5rem; /* 24px, equal left/right for symmetric spacing */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.navigation-flex {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between; 
+}
+
+.navigation-mobile {
+  display: none;
+  position: relative;
+}
+
+/* Show hamburger on tablet and smaller */
+@media (max-width: 1023px) {
+  .navigation-mobile {
+    display: block;
+  }
+  .navigation-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navigation-mobile {
+    display: none;
+  }
+  .navigation-desktop {
+    display: flex;
+  }
+}
+
+.navigation-hamburger-btn {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  outline-offset: 2px;
+}
+
+.navigation-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 1.5rem; 
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #fff;
+  display: flex;
+  gap: 0.2rem;
+  flex-direction: column;
+  padding: 1rem;
+  z-index: 9999;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  border-radius: 0.75rem;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 1;
+  transform: translateY(0);
+  min-width:12rem;
+}
+
+.navigation-link {
+  transition: color 0.2s ease;
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Desktop horizontal nav spacing */
+.navigation-desktop-list {
+  align-items: center;
+  gap: 2.5rem; /* ~40px gap for nice spacing */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.navigation-desktop-list .navigation-link {
+  padding: 0.25rem 1rem;
+}
+
+/* Hover and active states */
+.navigation-link:hover,
+.navigation-link.active {
+  color: #ffd700;
+  text-decoration: none;
+  cursor: pointer;
+}
