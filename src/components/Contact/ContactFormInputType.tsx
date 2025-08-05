@@ -1,6 +1,6 @@
-export interface InputField {
+export interface ContactFormInputType {
     name: string;
     email: string;
     senderOccupation: string;
-    description: string;
+    message: string;
 }
