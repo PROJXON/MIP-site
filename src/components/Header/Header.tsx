@@ -31,9 +31,7 @@ export const Header: React.FC = () => {
               alt="PROJXON Logo"
               className="h-10 w-10 mr-2"
             />
-            <span className="text-2xl md:text-3xl text-yellow-500 font-bold tracking-wide">
-              PROJXON
-            </span>
+          
           </div>
         </Link>
         <Navigation />

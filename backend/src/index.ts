@@ -1,9 +1,16 @@
 import express from 'express';
+import 'dotenv/config';
 
 //middleware that enables CORS (Cross-Origin Resource Sharing)
 //allowing frontend to make requests to the backend
 import cors from 'cors';
 import emailRoute from './routes/emailRoute';
+
+console.log("EMAIL_USER:", process.env.EMAIL_USER);
+console.log("OAUTH_CLIENT_ID:", process.env.OAUTH_CLIENT_ID);
+console.log("OAUTH_CLIENT_SECRET:", process.env.OAUTH_CLIENT_SECRET);
+console.log("OAUTH_REFRESH_TOKEN:", process.env.OAUTH_REFRESH_TOKEN);
+console.log("OAUTH_REDIRECT_URI:", process.env.OAUTH_REDIRECT_URI);
 
 //
 const app = express();
@@ -25,3 +32,4 @@ app.get('/', (_req, res) => {
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });
+

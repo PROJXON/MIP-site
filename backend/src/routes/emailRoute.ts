@@ -11,7 +11,7 @@ const router = Router();
 //defines a POST route for sending emails at the path "/"
 router.post("/", async (req, res) => {
     //this route expects a to, subkect, text, and html in the request body
-  const { to, subject, text, html } = req.body;
+  const { to, subject, text, html, userEmail, name } = req.body;
 
   //if any of the required fields are missing, it returns a 400 Bad Request error
   if (!to || !subject || (!text && !html)) {
@@ -27,6 +27,23 @@ router.post("/", async (req, res) => {
       subject,
       text,
       html,
+    });
+
+     // 2. Auto-reply to user
+    await sendEmail({
+      from: `'Projxon Team' <${process.env.EMAIL_USER}>`,
+      to: userEmail,
+      subject: "We've received your submission!",
+      //chang there to name
+      text:`
+        Hi ${name || "there"},
+
+        Thank you for your interest in the Momentum Internship Program! We have received your submission and will get back to you shortly.
+
+
+        Best regards,
+        The Projxon Team
+      `,
     });
     //if successful, it returns a 200 OK response with a success message
     res.status(200).json({ message: "Email sent successfully!" });
