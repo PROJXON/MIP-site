@@ -13,7 +13,7 @@ export const Footer: React.FC = () => {
             <img
               src={projxonMipLogo}
               alt="PROJXON Logo"
-              className="h-8 w-8 mr-2"
+              className="h-20 w-20 mr-2"
             />
             <span className="text-sm text-yellow-500 font-bold tracking-wide">Powered by PROJXON</span>
           </div>

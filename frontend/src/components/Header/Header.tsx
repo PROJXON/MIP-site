@@ -30,7 +30,7 @@ export const Header: React.FC = () => {
             <img
               src={projxonMipLogo}
               alt="PROJXON Logo"
-              className="h-10 w-10 mr-2"
+              className="h-28 w-28 mr-2"
             />
           
           </div>

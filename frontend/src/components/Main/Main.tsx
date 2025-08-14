@@ -24,7 +24,7 @@ export const Main: React.FC = () => {
   }, [metrics]);
 
   return (
-    <main className="flex-1 bg-gray-100">
+    <main className="flex-1 bg-black">
       {/* Hero Section */}
       <section className="flex-1 flex flex-col items-center justify-center py-12 bg-black px-4">
         <h2 className="text-3xl md:text-4xl font-semibold mb-4 text-center">Accelerate Talent. Elevate Impact</h2>
