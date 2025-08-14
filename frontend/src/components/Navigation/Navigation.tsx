@@ -6,6 +6,9 @@ export const Navigation: React.FC = () => {
     <nav>
       <ul className="flex space-x-4 md:space-x-8 text-sm md:text-base font-medium">
         <li>
+          <Link to="/" className="hover:text-yellow-400 transition">Home</Link>
+        </li>
+        <li>
           <Link to="/about" className="hover:text-yellow-400 transition">About</Link>
         </li>
         <li>
