@@ -5,6 +5,7 @@ import 'dotenv/config';
 //allowing frontend to make requests to the backend
 import cors from 'cors';
 import emailRoute from './routes/emailRoute';
+import testimonialsRoute from './routes/testimonialsRoute';
 
 console.log("EMAIL_USER:", process.env.EMAIL_USER);
 console.log("OAUTH_CLIENT_ID:", process.env.OAUTH_CLIENT_ID);
@@ -27,6 +28,8 @@ app.use('/api/email', emailRoute);
 app.get('/', (_req, res) => {
   res.send('Backend server is running!');
 });
+
+
 
 // Starts the server
 app.listen(PORT, () => {

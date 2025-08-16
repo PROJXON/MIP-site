@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
+import {Testimonials} from '../Testimonials/Testimonials';
 
 export const Main: React.FC = () => {
   // For animated impact numbers
@@ -85,6 +86,7 @@ export const Main: React.FC = () => {
           </div>
         </div>
       </section>
+      <Testimonials />
 
       {/* Impact Numbers Section */}
       <section className="py-16 flex flex-col items-center bg-black px-4">
