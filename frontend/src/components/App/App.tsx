@@ -1,4 +1,4 @@
-import './App.css'
+import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import { Footer } from '../Footer/Footer';
 import { Main } from '../Main/Main';
@@ -26,7 +26,7 @@ function App() {
       <Footer />
      
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,5 +1,5 @@
-import React from "react";
-import dreamBig from "/assets/images/dream-big.jpg";
+import React from 'react';
+import dreamBig from '/assets/images/dream-big.jpg';
 
 export const ForCompanies: React.FC = () => {
   return (
@@ -9,8 +9,8 @@ export const ForCompanies: React.FC = () => {
         className="relative w-full h-64 flex items-center justify-center mb-10"
         style={{
           backgroundImage: `url(${dreamBig})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
         }}
       >
         {/* Overlay for opacity */}

@@ -1,12 +1,12 @@
-import { useState, type JSX } from "react";
-import ContactForm from "./ContactForm";
-import contactFormFields from "./ContactFormFields"; // This should export your inputFields object
+import { useState, type JSX } from 'react';
+import ContactForm from './ContactForm';
+import contactFormFields from './ContactFormFields'; // This should export your inputFields object
 
 export function Contact(): JSX.Element {
-  const [role, setRole] = useState<"client" | "university" | "student" | "">("");
+  const [role, setRole] = useState<'client' | 'university' | 'student' | ''>('');
 
   const handleRoleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setRole(e.target.value as "client" | "university" | "student");
+    setRole(e.target.value as 'client' | 'university' | 'student');
   };
 
   return (
