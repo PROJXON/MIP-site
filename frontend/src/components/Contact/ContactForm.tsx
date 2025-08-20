@@ -1,16 +1,16 @@
-import { useState, type JSX , type FormEvent} from "react";
-import type { ContactFormInputType } from "./ContactFormInputType";
+import { useState, type JSX , type FormEvent} from 'react';
+import type { ContactFormInputType } from './ContactFormInputType';
 
 type ContactFormProps = {
   Input: ContactFormInputType;
-  role: "client" | "university" | "student";
+  role: 'client' | 'university' | 'student';
 };
 
 function ContactForm({ Input, role }: ContactFormProps): JSX.Element {
-    const [name, setName] = useState(""); // User's name
-    const [senderOccupation, setSenderOccupation] = useState(""); // User's occupation
-    const [email, setEmail] = useState(""); // User's email
-    const [message, setMessage] = useState(""); // User's message 
+    const [name, setName] = useState(''); // User's name
+    const [senderOccupation, setSenderOccupation] = useState(''); // User's occupation
+    const [email, setEmail] = useState(''); // User's email
+    const [message, setMessage] = useState(''); // User's message 
       const [error, setError] = useState<boolean>(false);
   const [success, setSuccess] = useState<boolean>(false);
     const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
@@ -18,11 +18,11 @@ function ContactForm({ Input, role }: ContactFormProps): JSX.Element {
       setError(false);
       setSuccess(false);
       try {
-        const response = await fetch("http://localhost:5050/api/email", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
+        const response = await fetch('http://localhost:5050/api/email', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            to: "recruiting@projxon.com",
+            to: 'recruiting@projxon.com',
             subject: `MIP Contact Form Submission from ${name} at ${senderOccupation}`,
             text: `From: ${name}\nEmail: <${email}>\nSubmission Message:\n${message}`,
             userEmail: email,
@@ -35,11 +35,11 @@ function ContactForm({ Input, role }: ContactFormProps): JSX.Element {
           setSuccess(true);
         } else {
           setError(true);
-          console.log("Failed to send email:", data.error);
+          console.log('Failed to send email:', data.error);
         }
       } catch (err) {
         setError(true);
-        console.log("Error sending email:", err);
+        console.log('Error sending email:', err);
       }
     };
 

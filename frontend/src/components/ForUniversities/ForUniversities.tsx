@@ -1,5 +1,5 @@
-import React from "react";
-import japaneseFight from "/assets/images/japanese-fight.jpg";
+import React from 'react';
+import japaneseFight from '/assets/images/japanese-fight.jpg';
 
 export const ForUniversities: React.FC = () => {
   return (
@@ -9,8 +9,8 @@ export const ForUniversities: React.FC = () => {
         className="relative w-full h-64 flex items-center justify-center mb-10"
         style={{
           backgroundImage: `url(${japaneseFight})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
         }}
       >
         {/* Overlay for opacity */}

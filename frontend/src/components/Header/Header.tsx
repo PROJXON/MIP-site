@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Navigation } from "../Navigation/Navigation";
-import { useState, useEffect } from "react";
-import projxonMipLogo from "/assets/images/projxon-mip-logo.png";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Navigation } from '../Navigation/Navigation';
+import { useState, useEffect } from 'react';
+import projxonMipLogo from '/assets/images/projxon-mip-logo.png';
 
 export const Header: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);

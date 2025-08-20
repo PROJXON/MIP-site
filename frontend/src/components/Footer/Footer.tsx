@@ -1,7 +1,7 @@
-import React from "react";
-import emailIcon from "/assets/images/email.png";
-import linkedinIcon from "/assets/images/linkedin.png";
-import projxonMipLogo from "/assets/images/projxon-mip-logo.png";
+import React from 'react';
+import emailIcon from '/assets/images/email.png';
+import linkedinIcon from '/assets/images/linkedin.png';
+import projxonMipLogo from '/assets/images/projxon-mip-logo.png';
 
 export const Footer: React.FC = () => {
   return (
@@ -48,4 +48,4 @@ export const Footer: React.FC = () => {
       </div>
     </footer>
   );
-}
+};
