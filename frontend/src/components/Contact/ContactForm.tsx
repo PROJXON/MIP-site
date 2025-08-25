@@ -1,6 +1,10 @@
 import { useState, type JSX , type FormEvent} from 'react';
 import type { ContactFormInputType } from './ContactFormInputType';
 
+const API_BASE_URL = (typeof window !== 'undefined' && window.location.hostname === 'localhost')
+  ? 'http://localhost:5050'
+  : 'https://api.momentuminternshipprogram.com';
+
 type ContactFormProps = {
   Input: ContactFormInputType;
   role: 'client' | 'university' | 'student';
@@ -18,7 +22,7 @@ function ContactForm({ Input, role }: ContactFormProps): JSX.Element {
       setError(false);
       setSuccess(false);
       try {
-        const response = await fetch('http://localhost:5050/api/email', {
+        const response = await fetch(`${API_BASE_URL}/api/email`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
