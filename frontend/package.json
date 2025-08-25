@@ -7,9 +7,10 @@
   "scripts": {
     "dev": "vite --open",
     "build": "tsc -b && vite build",
+    "build:ghp": "cross-env DEPLOY_TARGET=gh-pages tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build && cp dist/index.html dist/404.html",
+    "predeploy": "npm run build:ghp && cp dist/index.html dist/404.html",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
@@ -39,6 +40,7 @@
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.34.1",
     "vite": "^7.0.0",
-    "vite-plugin-eslint": "^1.8.1"
+    "vite-plugin-eslint": "^1.8.1",
+    "cross-env": "^7.0.3"
   }
 }
