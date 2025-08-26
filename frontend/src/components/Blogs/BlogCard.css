@@ -1,0 +1,47 @@
+/* Blog Cards Styling */
+.blog-img {
+  height: 250px;
+}
+
+.blog-card {
+  transition: 0.2s ease-in-out;
+}
+
+.blog-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #ffd700;
+}
+
+.blog-card-title {
+  text-decoration: none;
+  color: #000000;
+}
+
+.blog-card-title:hover {
+  text-decoration: underline #ffd700;
+}
+
+.blog-button {
+  background-color: #ffd700 !important;
+  border: #ffd700;
+  color: #000000;
+}
+
+.blog-button:hover {
+  background-color: rgb(234 179 8 / 1) !important;
+  border: rgb(234 179 8 / 1);
+  color: #000000;
+}
+
+.blog-button:active {
+  color: #000000 !important;
+}
+
+.card-excerpt {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
