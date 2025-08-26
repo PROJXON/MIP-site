@@ -26,11 +26,8 @@ router.get('/', async (_req, res) => {
       allPosts.push(...response.data); // Append posts to the result array
 
       // If the number of posts is less than the per_page limit, we've reached the end
-      if (response.data.length < 10) {
-        hasMorePosts = false;
-      } else {
-        page++; // Move to the next page
-      }
+      if (response.data.length < 10) hasMorePosts = false;
+      else page++; // Move to the next page
     }
 
     res.status(200).json(allPosts);
