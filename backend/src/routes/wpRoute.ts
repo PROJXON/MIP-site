@@ -1,8 +1,8 @@
 import { Router } from 'express';
-const router = Router();
 import axios from 'axios';
 
 export default function wpRoute(baseURL: string, path: `/${string}`) {
+  const router = Router();
   const api = axios.create({
     baseURL: baseURL,
   });

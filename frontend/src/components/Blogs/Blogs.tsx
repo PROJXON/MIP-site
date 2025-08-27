@@ -11,9 +11,7 @@ export default function Blogs() {
   return (
     <div>
       {loading ? (
-        <div className="text-center my-5">
-          <LoadingSpinner /> {/* Show loading spinner while fetching data */}
-        </div>
+        <LoadingSpinner />
       ) : blogs.length > 0 ? (
         <>
           <ul className="blog-list list-unstyled flex flex-wrap justify-center gap-6 my-5 px-6 max-w-7xl mx-auto">
