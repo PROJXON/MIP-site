@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import LoadingSpinner from './LoadingSpinner';
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner.tsx';
 import type { WPBlogPost } from '../../../types.ts';
 import BlogCard from './BlogCard';
 
