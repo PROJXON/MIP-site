@@ -32,17 +32,13 @@ export default function Blogs() {
 
   return (
     <div>
-      <h2 className="mb-5 text-yellow">
-        Internship Graduate Blogs <span className="blog-heading-border mt-2"></span>
-      </h2>
-
       {loading ? (
         <div className="text-center my-5">
           <LoadingSpinner /> {/* Show loading spinner while fetching data */}
         </div>
       ) : blogs.length > 0 ? (
         <>
-          <ul className="list-unstyled row row-cols-1 row-cols-md-2 row-cols-lg-3 mt-5">
+          <ul className="list-unstyled grid grid-cols-1 md:grid-cols-2 gap-2 my-5 px-6">
             {/* {blogs.slice(0, visibleBlogs).map((blog, index) => (
                 <BlogCard blog={blog} key={index} />
               ))} */}

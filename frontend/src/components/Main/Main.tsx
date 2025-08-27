@@ -38,22 +38,13 @@ export const Main: React.FC = () => {
           Custom-designed internship programs that create future-ready leaders.
         </p>
         <div className="flex flex-col md:flex-row gap-4">
-          <a
-            href="#companies"
-            className="px-6 py-3 bg-yellow-500 text-black rounded-lg text-base font-semibold hover:bg-yellow-400 transition text-center"
-          >
+          <a href="#companies" className="gold-button">
             Design a MIP for My Company
           </a>
-          <a
-            href="#universities"
-            className="px-6 py-3 bg-yellow-500 text-black rounded-lg text-base font-semibold hover:bg-yellow-400 transition text-center"
-          >
+          <a href="#universities" className="gold-button">
             Become a University Partner
           </a>
-          <a
-            href="#interns"
-            className="px-6 py-3 bg-yellow-500 text-black rounded-lg text-base font-semibold hover:bg-yellow-400 transition text-center"
-          >
+          <a href="#interns" className="gold-button">
             Apply for An Internship
           </a>
         </div>

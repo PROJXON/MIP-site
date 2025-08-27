@@ -1,8 +1,4 @@
 /* Blog Cards Styling */
-.blog-img {
-  height: 250px;
-}
-
 .blog-card {
   transition: 0.2s ease-in-out;
 }
@@ -14,7 +10,7 @@
 
 .blog-card-title {
   text-decoration: none;
-  color: #000000;
+  color: #ffd700;
 }
 
 .blog-card-title:hover {
@@ -24,17 +20,17 @@
 .blog-button {
   background-color: #ffd700 !important;
   border: #ffd700;
-  color: #000000;
+  color: #ffd700;
 }
 
 .blog-button:hover {
   background-color: rgb(234 179 8 / 1) !important;
   border: rgb(234 179 8 / 1);
-  color: #000000;
+  color: #ffd700;
 }
 
 .blog-button:active {
-  color: #000000 !important;
+  color: #ffd700 !important;
 }
 
 .card-excerpt {

@@ -15,50 +15,44 @@ const BlogCard = ({ blog, blogStyle }: { blog: WPBlogPost; blogStyle?: string })
   const sourceUrl = featuredMedia?.[0]?.source_url || blogDefaultImg;
 
   return (
-    <li key={blog.id} className="col mb-4" data-aos="fade-up">
+    <li key={blog.id} data-aos="fade-up">
       <div
-        className={`overflow-hidden blog-card h-100 ${blogStyle === 'dark' ? 'bg-black' : 'bg-light'}`}
+        className={`overflow-hidden blog-card h-100 px-2 ${blogStyle === 'dark' ? 'bg-black' : 'bg-light'}`}
       >
         <a href={`/internships/${blog.slug}`}>
-          <img
-            className="blog-img w-100 object-fit-cover"
-            src={sourceUrl}
-            alt={blog.title.rendered}
-            width={600}
-            height={350}
-          />
+          <img className="w-100 object-fit-contain" src={sourceUrl} alt={blog.title.rendered} />
         </a>
 
-        <div className={`d-flex flex-column ${blogStyle === 'dark' && 'px-0'}`}>
+        <div className={`d-flex flex-column mb-3 ${blogStyle === 'dark' && 'px-0'}`}>
           <a
-            href={`/internships/${blog.slug}`}
+            href="#"
             className={`blog-card-title ${blogStyle === 'dark' ? 'text-white' : 'text-black'}`}
           >
-            <h2 className="mb-0">{blog.title.rendered}</h2>
+            <h2 className="mb-0 font-bold text-xl">{blog.title.rendered}</h2>
           </a>
 
-          <div className="d-flex align-items-center gap-2 mt-1">
+          <div className="d-flex align-items-center gap-2 my-1">
             <span className={blogStyle === 'dark' ? 'text-gray' : 'text-muted'}>
               {blog._embedded?.author?.[0]?.name}
             </span>
             <span
-              className={`${blogStyle === 'dark' ? 'text-gray' : 'text-muted'} dot-seperator fs-6`}
+              className={`${blogStyle === 'dark' ? 'text-gray' : 'text-muted'} dot-seperator fs-6 text-xs`}
             >
-              •
+              &nbsp;•&nbsp;
             </span>
             <span className={blogStyle === 'dark' ? 'text-gray' : 'text-muted'}>
               {formatDate(blog.date, 'short')}
             </span>
           </div>
 
-          <div className="clamped-container py-4 flex-grow-1">
+          <div className="clamped-container mt-4 mb-5 flex-grow-1">
             <div
               dangerouslySetInnerHTML={{ __html: blog.excerpt.rendered }}
-              className={`card-excerpt ${blogStyle === 'dark' ? 'text-gray' : 'text-muted'}`}
+              className={`card-excerpt ${blogStyle === 'dark' ? 'text-gray' : 'text-muted '}`}
             />
           </div>
 
-          <a href={`/internships/${blog.slug}`} className="mt-auto">
+          <a href="#" className="gold-button">
             <button>Read More</button>
           </a>
         </div>
