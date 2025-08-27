@@ -14,7 +14,6 @@ export default function useWPFetch<T>(route: string): [T[], boolean] {
         const response = await fetch(`${API_BASE_URL}/api/${route}`);
         if (!response.ok) throw new Error(`Error: ${response.statusText}`);
         const data = await response.json();
-        console.log(`${route} data`, data);
         setBlogs(data);
       } catch (err) {
         console.error(err instanceof Error ? err.message : 'Unknown error');
