@@ -1,6 +1,6 @@
 import blogDefaultImg from '../../../public/assets/images/default-blog-img.webp';
 import './BlogCard.css';
-import type { WPBlogPost } from '../../../types.ts';
+import type { WPBlogPost } from '../../types.ts';
 
 const BlogCard = ({ blog, blogStyle }: { blog: WPBlogPost; blogStyle?: string }) => {
   const formatDate = (date: Date, monthOpt: 'long' | 'short') => {
@@ -20,7 +20,11 @@ const BlogCard = ({ blog, blogStyle }: { blog: WPBlogPost; blogStyle?: string })
         className={`overflow-hidden blog-card h-100 ${blogStyle === 'dark' ? 'bg-black' : 'bg-light'}`}
       >
         <a href={`/internships/${blog.slug}`}>
-          <img className="blog-img w-100 object-fit-cover" src={sourceUrl} alt={blog.title.rendered} />
+          <img
+            className="blog-img w-100 object-fit-cover"
+            src={sourceUrl}
+            alt={blog.title.rendered}
+          />
         </a>
 
         <div className={`d-flex flex-column blog-card-body ${blogStyle === 'dark' && 'px-0'}`}>

@@ -1,33 +1,8 @@
-import type { WPBlogPost } from '../../../types.ts';
-import { useState, useEffect } from 'react';
-
-const API_BASE_URL =
-  typeof window !== 'undefined' && window.location.hostname === 'localhost'
-    ? 'http://localhost:5050'
-    : 'https://api.momentuminternshipprogram.com';
+import type { Testimonial } from '../../types.ts';
+import useWPFetch from '../../hooks/useWPFetch.ts';
 
 export default function Testimonials() {
-  const [testimonials, setTestimonials] = useState<WPBlogPost[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    (async () => {
-      try {
-        const response = await fetch(`${API_BASE_URL}/api/testimonials`);
-        console.log(`${API_BASE_URL}/api/testimonials`);
-        if (!response.ok) {
-          throw new Error(`Error: ${response.statusText}`);
-        }
-        const data = await response.json();
-        console.log(data);
-        setTestimonials(data);
-      } catch (err) {
-        console.error(err instanceof Error ? err.message : 'Unknown error');
-      } finally {
-        setLoading(false);
-      }
-    })();
-  }, []);
+  const [testimonials, loading] = useWPFetch<Testimonial>('testimonials');
 
   return (
     <div className="testimonials">

@@ -39,3 +39,11 @@ export interface WPPostContent {
   protected?: boolean;
   rendered: string;
 }
+
+export interface Testimonial {
+  id: `${number}`;
+  image: string;
+  quote: string;
+  name: string;
+  title: string;
+}
