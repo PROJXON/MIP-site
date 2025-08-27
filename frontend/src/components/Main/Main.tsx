@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
+import Testimonials from '../Testimonials/Testimonials';
 import Blogs from '../Blogs/Blogs';
 
 export const Main: React.FC = () => {
@@ -91,6 +92,8 @@ export const Main: React.FC = () => {
           ))}
         </div>
       </section>
+
+      <Testimonials />
 
       <Blogs />
     </main>

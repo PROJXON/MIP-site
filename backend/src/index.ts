@@ -6,8 +6,8 @@ import 'dotenv/config';
 import cors from 'cors';
 import emailRoute from './routes/emailRoute';
 import blogRoute from './routes/blogRoute';
+import testimonialsRoute from './routes/testimonialsRoute';
 
-//
 const app = express();
 const PORT = process.env.PORT || 5050;
 
@@ -19,6 +19,7 @@ app.use(express.json());
 
 app.use('/api/email', emailRoute);
 app.use('/api/blogs', blogRoute);
+app.use('/api/testimonials', testimonialsRoute);
 // defines GET route for the root path http://localhost:5000/
 app.get('/', (_req, res) => {
   res.send('Backend server is running!');
