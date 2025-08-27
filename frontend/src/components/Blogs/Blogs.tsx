@@ -19,7 +19,9 @@ export default function Blogs() {
     (async () => {
       try {
         const response = await fetch(`${API_BASE_URL}/api/blogs`);
-        if (!response.ok) throw new Error(`Error: ${response.statusText}`);
+        if (!response.ok) {
+          throw new Error(`Error: ${response.statusText}`);
+        }
         const data = await response.json();
         setBlogs(data);
       } catch (err) {
@@ -38,7 +40,7 @@ export default function Blogs() {
         </div>
       ) : blogs.length > 0 ? (
         <>
-          <ul className="list-unstyled grid grid-cols-1 md:grid-cols-2 gap-2 my-5 px-6">
+          <ul className="blog-list list-unstyled flex flex-wrap justify-center gap-6 my-5 px-6 max-w-7xl mx-auto">
             {/* {blogs.slice(0, visibleBlogs).map((blog, index) => (
                 <BlogCard blog={blog} key={index} />
               ))} */}
