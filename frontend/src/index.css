@@ -9,3 +9,7 @@ body {
 #root {
   @apply min-h-screen;
 }
+
+.gold-button {
+  @apply px-6 py-3 bg-yellow-500 text-black rounded-lg text-base font-semibold hover:bg-yellow-400 transition text-center;
+}

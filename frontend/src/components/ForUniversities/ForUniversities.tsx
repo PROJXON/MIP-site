@@ -61,9 +61,7 @@ export const ForUniversities: React.FC = () => {
 
       {/* Sections */}
       <section id="benefits" className="max-w-3xl mx-auto mb-12 px-4">
-        <h3 className="text-2xl font-bold text-yellow-400 mb-2">
-          University Benefits
-        </h3>
+        <h3 className="text-2xl font-bold text-yellow-400 mb-2">University Benefits</h3>
         <ul className="list-disc list-inside text-gray-300">
           <li>Enhance student employability with real-world projects</li>
           <li>Strengthen university-industry partnerships</li>
@@ -73,43 +71,33 @@ export const ForUniversities: React.FC = () => {
         </ul>
       </section>
       <section id="journey" className="max-w-3xl mx-auto mb-12 px-4">
-        <h3 className="text-2xl font-bold text-yellow-400 mb-2">
-          Intern Journey
-        </h3>
+        <h3 className="text-2xl font-bold text-yellow-400 mb-2">Intern Journey</h3>
         <p className="text-gray-300">
-          Students participate in hands-on projects, collaborate with industry
-          professionals, and receive mentorship throughout their internship. The
-          journey includes onboarding, project work, regular feedback, and a final
-          showcase of achievements.
+          Students participate in hands-on projects, collaborate with industry professionals, and
+          receive mentorship throughout their internship. The journey includes onboarding, project
+          work, regular feedback, and a final showcase of achievements.
         </p>
       </section>
       <section id="stories" className="max-w-3xl mx-auto mb-12 px-4">
-        <h3 className="text-2xl font-bold text-yellow-400 mb-2">
-          Sample Success Stories
-        </h3>
+        <h3 className="text-2xl font-bold text-yellow-400 mb-2">Sample Success Stories</h3>
         <p className="text-gray-300">
-          "Our students gained invaluable experience and landed top jobs after
-          graduation thanks to the Momentum Internship Program." <br />
+          "Our students gained invaluable experience and landed top jobs after graduation thanks to
+          the Momentum Internship Program." <br />
           <span className="text-yellow-300">– University Partner</span>
         </p>
       </section>
       <section id="faq" className="max-w-3xl mx-auto mb-12 px-4">
-        <h3 className="text-2xl font-bold text-yellow-400 mb-2">
-          FAQ for Universities
-        </h3>
+        <h3 className="text-2xl font-bold text-yellow-400 mb-2">FAQ for Universities</h3>
         <p className="text-gray-300">
-          Have questions? Check out our FAQ or contact us for more information
-          about partnering with Momentum.
+          Have questions? Check out our FAQ or contact us for more information about partnering with
+          Momentum.
         </p>
       </section>
       <section id="cta" className="max-w-3xl mx-auto mb-12 px-4 text-center">
         <h3 className="text-2xl font-bold text-yellow-400 mb-2">
           Ready to bring Momentum to your campus?
         </h3>
-        <a
-          href="/contact"
-          className="inline-block mt-4 px-6 py-3 bg-yellow-500 text-black rounded-lg font-semibold hover:bg-yellow-400 transition"
-        >
+        <a href="/contact" className="inline-block mt-4 gold-button">
           Become a University Partner
         </a>
       </section>
