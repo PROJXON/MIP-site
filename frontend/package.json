@@ -2,7 +2,7 @@
   "name": "mip-site",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://projxon.github.io/MIP-site",
+  "homepage": "https://momentuminternshipprogram.com",
   "type": "module",
   "scripts": {
     "dev": "vite --open",
