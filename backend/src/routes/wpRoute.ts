@@ -20,10 +20,11 @@ export default function wpRoute(baseURL: string, path: `/${string}`) {
             per_page: 10, // Number of posts per page
           },
         });
-        allItems.push(...response.data); // Append posts to the result array
+        allItems.push(...(response.data as any[])); // Append posts to the result array
 
         // If the number of posts is less than the per_page limit, we've reached the end
-        if (response.data.length < 10) hasMoreItems = false;
+        const items = response.data as any[];
+        if (items.length < 10) hasMoreItems = false;
         else page++; // Move to the next page
       }
 
