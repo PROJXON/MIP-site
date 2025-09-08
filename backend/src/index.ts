@@ -8,7 +8,15 @@ const app = express();
 const PORT = process.env.PORT || 5050;
 
 //adds middleware to the express app
-app.use(cors());
+app.use(cors(
+  {
+  origin: [
+    'https://momentuminternshipprogram.com',
+    'https://www.momentuminternshipprogram.com'
+  ],
+  credentials: true
+}
+));
 
 //adds middleware to parse JSON bodies
 app.use(express.json());
