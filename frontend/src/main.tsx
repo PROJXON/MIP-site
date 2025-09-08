@@ -49,8 +49,9 @@ const Root = () => {
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter basename={import.meta.env.MODE === 'production' ? '/MIP-site' : undefined}>
-      <Root />
+    <BrowserRouter>
+      <App />
     </BrowserRouter>
   </StrictMode>
 );
+
