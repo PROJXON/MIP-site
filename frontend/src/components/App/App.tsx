@@ -9,8 +9,6 @@ import { ForUniversities } from '../ForUniversities/ForUniversities';
 import { ForInterns } from '../ForInterns/ForInterns';
 import { Contact } from '../Contact/Contact';
 
-
-
 function App() {
   return (
     <div className="min-h-screen bg-black text-white flex flex-col w-full overflow-x-hidden">
@@ -24,7 +22,6 @@ function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
-     
     </div>
   );
 }

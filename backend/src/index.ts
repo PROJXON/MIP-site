@@ -1,12 +1,9 @@
 import express from 'express';
 import 'dotenv/config';
-
-//middleware that enables CORS (Cross-Origin Resource Sharing)
-//allowing frontend to make requests to the backend
 import cors from 'cors';
 import emailRoute from './routes/emailRoute';
+import wpRoute from './routes/wpRoute';
 
-//
 const app = express();
 const PORT = process.env.PORT || 5050;
 
@@ -25,6 +22,8 @@ app.use(cors(
 app.use(express.json());
 
 app.use('/api/email', emailRoute);
+app.use('/api/blogs', wpRoute(process.env.WORDPRESS_API_URL!, '/posts?_embed'));
+app.use('/api/testimonials', wpRoute(process.env.WORDPRESS_CUSTOM_API_URL!, '/clients'));
 // defines GET route for the root path http://localhost:5000/
 app.get('/', (_req, res) => {
   res.send('Backend server is running!');
@@ -34,4 +33,3 @@ app.get('/', (_req, res) => {
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });
-
