@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import Testimonials from '../Testimonials/Testimonials';
 import Blogs from '../Blogs/Blogs';
+import mipHome from '/assets/images/mip-home.jpg';
 
 export const Main: React.FC = () => {
   // For animated impact numbers
@@ -31,23 +32,35 @@ export const Main: React.FC = () => {
   return (
     <main className="flex-1 bg-black">
       {/* Hero Section */}
-      <section className="flex-1 flex flex-col items-center justify-center py-12 bg-black px-4">
-        <h2 className="text-3xl md:text-4xl font-semibold mb-4 text-center">
-          Accelerate Talent. Elevate Impact
-        </h2>
-        <p className="mb-6 text-gray-300 max-w-xl text-center">
-          Custom-designed internship programs that create future-ready leaders.
-        </p>
-        <div className="flex flex-col md:flex-row gap-4">
-          <a href="#companies" className="gold-button">
-            Design a MIP for My Company
-          </a>
-          <a href="#universities" className="gold-button">
-            Become a University Partner
-          </a>
-          <a href="#interns" className="gold-button">
-            Apply for An Internship
-          </a>
+      <section
+        className="w-full flex flex-col items-center justify-center py-12 bg-black px-4 relative min-h-[320px]"
+        style={{
+          backgroundImage: `url(${mipHome})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black opacity-70 z-0"></div>
+        {/* Content */}
+        <div className="relative z-10 flex flex-col items-center">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-4 text-center text-yellow-500">
+            Accelerate Talent, Elevate Impact
+          </h2>
+          <p className="mb-6 text-white max-w-xl text-center">
+            Custom-designed internship programs that create future-ready leaders
+          </p>
+          <div className="flex flex-col md:flex-row gap-4">
+            {/* <a href="#companies" className="gold-button">
+              Design a MIP for My Company
+            </a>
+            <a href="#universities" className="gold-button">
+              Become a University Partner
+            </a>
+            <a href="#interns" className="gold-button">
+              Apply for An Internship
+            </a> */}
+          </div>
         </div>
       </section>
 
@@ -79,12 +92,12 @@ export const Main: React.FC = () => {
       </section>
 
       {/* Impact Numbers Section */}
-      <section className="py-16 flex flex-col items-center bg-black px-4">
+      <section className="py-5 flex flex-col items-center bg-black px-4">
         <div className="flex flex-wrap justify-center gap-8 text-center">
           {metrics.map((metric, i) => (
             <span
               key={metric.label}
-              className={`text-2xl md:text-3xl font-bold text-yellow-400 transition-opacity duration-700 ${showMetrics[i] ? 'opacity-100' : 'opacity-0'}`}
+              className={`text-lg md:text-lg font-bold text-yellow-500 transition-opacity duration-700 ${showMetrics[i] ? 'opacity-100' : 'opacity-0'}`}
               style={{ transitionDelay: `${i * 300}ms` }}
             >
               {metric.label}
