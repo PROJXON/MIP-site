@@ -11,7 +11,13 @@ const wpRoute_1 = __importDefault(require("./routes/wpRoute"));
 const app = (0, express_1.default)();
 const PORT = process.env.PORT || 5050;
 //adds middleware to the express app
-app.use((0, cors_1.default)());
+app.use((0, cors_1.default)({
+    origin: [
+        'https://momentuminternshipprogram.com',
+        'https://www.momentuminternshipprogram.com'
+    ],
+    credentials: true
+}));
 //adds middleware to parse JSON bodies
 app.use(express_1.default.json());
 app.use('/api/email', emailRoute_1.default);

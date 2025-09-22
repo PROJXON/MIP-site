@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 5050;
 app.use(cors(
   {
   origin: [
+    'http://localhost:5173',
     'https://momentuminternshipprogram.com',
     'https://www.momentuminternshipprogram.com'
   ],
