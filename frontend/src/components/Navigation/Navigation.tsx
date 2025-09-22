@@ -19,9 +19,8 @@ export const Navigation: React.FC = () => {
       {/* Navigation Links */}
       <ul
         className={`flex-col md:flex-row md:flex items-end md:items-center space-y-2 md:space-y-0 space-x-0 md:space-x-8 text-sm md:text-base font-medium absolute md:static top-12 w-full md:w-auto z-10 transition-all ${
-          open ? 'flex left-0 pr-4 bg-black' : 'hidden md:flex left-0'
+          open ? 'flex left-0 bg-black' : 'hidden md:flex left-0'
         }`}
-        style={open ? {background: "#000000"} : {}}
       >
         <li>
           <Link to="/" className="hover:text-yellow-400 transition" onClick={() => setOpen(false)}>Home</Link>
