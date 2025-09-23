@@ -13,3 +13,8 @@ body {
 .gold-button {
   @apply px-6 py-3 bg-yellow-500 text-black rounded-lg text-base font-semibold hover:bg-yellow-400 transition text-center;
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffcc00d8 !important;
+}

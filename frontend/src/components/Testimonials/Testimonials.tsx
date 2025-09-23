@@ -1,33 +1,47 @@
 import type { Testimonial } from '../../types.ts';
 import useWPFetch from '../../hooks/useWPFetch.ts';
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner.tsx';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 export default function Testimonials() {
   const [testimonials, loading] = useWPFetch<Testimonial>('testimonials');
 
   return (
     <div className="mb-2">
+      <h2 className="text-2xl font-bold mb-6 text-center text-yellow-500">Our Trusted Interns</h2>
       {loading ? (
         <LoadingSpinner />
       ) : testimonials.length > 0 ? (
-        <ul className="blog-list list-unstyled flex flex-wrap justify-center gap-6 my-5 px-6 max-w-7xl mx-auto">
+        <Swiper
+          spaceBetween={1}
+          slidesPerView={1}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          loop
+          modules={[Navigation]}
+          navigation
+        >
           {testimonials.map((test) => (
-            <li key={test.id}>
-              <div className="mb-4 flex">
+            <SwiperSlide key={test.id}>
+              <div className="mb-4 flex flex-col items-center mx-auto p-4 rounded shadow max-w-xs">
                 <img
                   src={test.image}
                   alt={test.name}
-                  className="rounded-full border w-[65px] h-[65px]"
+                  className="rounded-full border w-12 h-12 mb-2"
                 />
-                <div className="flex-1 m-auto">
-                  <h4 className="mb-0 text-[#ffd700] font-bold text-lg">{test.name}</h4>
-                  <p className="mb-0 small text-sm text-gray-400">{test.title}</p>
-                </div>
+                <h4 className="mb-0  text-yellow-500 font-bold text-base text-center">{test.name}</h4>
+                <p className="mb-0 small text-xs text-gray-500 text-center">{test.title}</p>
+                <p className="gray-opacity text-xs text-gray-400 text-center mt-2">{test.quote}</p>
               </div>
-              <p className="gray-opacity text-gray">{test.quote}</p>
-            </li>
+            </SwiperSlide>
           ))}
-        </ul>
+        </Swiper>
       ) : (
         <div className="text-center my-5">
           <p>No testimonials at the moment.</p>
