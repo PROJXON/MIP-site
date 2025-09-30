@@ -3,8 +3,6 @@ import useWPFetch from '../../hooks/useWPFetch.ts';
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner.tsx';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
 
 export default function Testimonials() {
   const [testimonials, loading] = useWPFetch<Testimonial>('testimonials');
@@ -35,7 +33,9 @@ export default function Testimonials() {
                   alt={test.name}
                   className="rounded-full border w-12 h-12 mb-2"
                 />
-                <h4 className="mb-0  text-yellow-500 font-bold text-base text-center">{test.name}</h4>
+                <h4 className="mb-0  text-yellow-500 font-bold text-base text-center">
+                  {test.name}
+                </h4>
                 <p className="mb-0 small text-xs text-gray-500 text-center">{test.title}</p>
                 <p className="gray-opacity text-xs text-gray-400 text-center mt-2">{test.quote}</p>
               </div>
