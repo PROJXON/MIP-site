@@ -1,7 +1,7 @@
 import React from 'react';
 import japaneseFight from '/assets/images/japanese-fight.jpg';
 
-export const ForUniversities: React.FC = () => {
+export const Universities: React.FC = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Header Banner */}

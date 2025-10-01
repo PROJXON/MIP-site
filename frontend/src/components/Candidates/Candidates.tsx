@@ -1,7 +1,7 @@
 import React from 'react';
 import goldNotecard from '/assets/images/gold-notecard.jpg';
 
-export const ForInterns: React.FC = () => {
+export const Candidates: React.FC = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Header Banner */}
@@ -54,7 +54,7 @@ export const ForInterns: React.FC = () => {
         >
           Intern Voices
         </a>
-         <a
+        <a
           href="#faq"
           className="px-4 py-2 rounded bg-yellow-500 text-black font-semibold hover:bg-yellow-400 transition"
         >
@@ -66,16 +66,14 @@ export const ForInterns: React.FC = () => {
         >
           How To Apply
         </a>
-       
       </nav>
 
       {/* Sections */}
       <section id="who" className="max-w-3xl mx-auto mb-12 px-4">
         <h3 className="text-2xl font-bold text-yellow-400 mb-2">Who It's For</h3>
         <p className="text-gray-300">
-          This program is designed for ambitious students and recent graduates who
-          want to gain real-world experience, build their professional network,
-          and make a tangible impact.
+          This program is designed for ambitious students and recent graduates who want to gain
+          real-world experience, build their professional network, and make a tangible impact.
         </p>
       </section>
       <section id="benefits" className="max-w-3xl mx-auto mb-12 px-4">
@@ -102,23 +100,22 @@ export const ForInterns: React.FC = () => {
       <section id="voices" className="max-w-3xl mx-auto mb-12 px-4">
         <h3 className="text-2xl font-bold text-yellow-400 mb-2">Intern Voices</h3>
         <p className="text-gray-300">
-          "Momentum gave me the confidence and skills to succeed in my first job
-          after graduation." <br />
+          "Momentum gave me the confidence and skills to succeed in my first job after graduation."{' '}
+          <br />
           <span className="text-yellow-300">– Former Intern</span>
         </p>
       </section>
-     
+
       <section id="faq" className="max-w-3xl mx-auto mb-12 px-4">
         <h3 className="text-2xl font-bold text-yellow-400 mb-2">FAQ for Interns</h3>
         <p className="text-gray-300">
           Have questions? Check out our FAQ or contact us for more information.
         </p>
       </section>
-       <section id="apply" className="max-w-3xl mx-auto mb-12 px-4">
+      <section id="apply" className="max-w-3xl mx-auto mb-12 px-4">
         <h3 className="text-2xl font-bold text-yellow-400 mb-2">How To Apply</h3>
         <p className="text-gray-300">
-          Ready to launch your career? Click the button below to start your
-          application!
+          Ready to launch your career? Click the button below to start your application!
         </p>
         <a
           href="/contact"

@@ -1,7 +1,7 @@
 import React from 'react';
 import dreamBig from '/assets/images/dream-big.jpg';
 
-export const ForCompanies: React.FC = () => {
+export const Companies: React.FC = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Header Banner */}
@@ -64,29 +64,23 @@ export const ForCompanies: React.FC = () => {
 
       {/* Sections */}
       <section id="why" className="max-w-3xl mx-auto mb-12 px-4">
-        <h3 className="text-2xl font-bold text-yellow-400 mb-2">
-          Why host a MIP
-        </h3>
+        <h3 className="text-2xl font-bold text-yellow-400 mb-2">Why host a MIP</h3>
         <p className="text-gray-300">
-          Hosting a Momentum Internship Program (MIP) connects your business with
-          emerging talent, fresh perspectives, and innovative solutions. It's a
-          unique way to build your future workforce and make a real impact.
+          Hosting a Momentum Internship Program (MIP) connects your business with emerging talent,
+          fresh perspectives, and innovative solutions. It's a unique way to build your future
+          workforce and make a real impact.
         </p>
       </section>
       <section id="how" className="max-w-3xl mx-auto mb-12 px-4">
-        <h3 className="text-2xl font-bold text-yellow-400 mb-2">
-          How It Works
-        </h3>
+        <h3 className="text-2xl font-bold text-yellow-400 mb-2">How It Works</h3>
         <p className="text-gray-300">
-          We match your business needs with motivated interns, provide onboarding
-          and support, and ensure a seamless experience from project kickoff to
-          completion. Our team handles the logistics so you can focus on results.
+          We match your business needs with motivated interns, provide onboarding and support, and
+          ensure a seamless experience from project kickoff to completion. Our team handles the
+          logistics so you can focus on results.
         </p>
       </section>
       <section id="what" className="max-w-3xl mx-auto mb-12 px-4">
-        <h3 className="text-2xl font-bold text-yellow-400 mb-2">
-          What You Get
-        </h3>
+        <h3 className="text-2xl font-bold text-yellow-400 mb-2">What You Get</h3>
         <ul className="list-disc list-inside text-gray-300">
           <li>Access to top student talent</li>
           <li>Fresh ideas and perspectives</li>
@@ -98,19 +92,16 @@ export const ForCompanies: React.FC = () => {
       <section id="case" className="max-w-3xl mx-auto mb-12 px-4">
         <h3 className="text-2xl font-bold text-yellow-400 mb-2">Case Study</h3>
         <p className="text-gray-300">
-          "Our MIP interns delivered a new marketing strategy that increased our
-          engagement by 40%. We hired two of them full-time after the program!"
+          "Our MIP interns delivered a new marketing strategy that increased our engagement by 40%.
+          We hired two of them full-time after the program!"
           <br />
           <span className="text-yellow-300">– Satisfied Client</span>
         </p>
       </section>
       <section id="faq" className="max-w-3xl mx-auto mb-12 px-4">
-        <h3 className="text-2xl font-bold text-yellow-400 mb-2">
-          FAQ for Clients
-        </h3>
+        <h3 className="text-2xl font-bold text-yellow-400 mb-2">FAQ for Clients</h3>
         <p className="text-gray-300">
-          Have questions? Check out our FAQ or contact us for more information
-          about hosting a MIP.
+          Have questions? Check out our FAQ or contact us for more information about hosting a MIP.
         </p>
       </section>
       <section id="cta" className="max-w-3xl mx-auto mb-12 px-4 text-center">
