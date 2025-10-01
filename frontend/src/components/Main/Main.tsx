@@ -47,15 +47,15 @@ export const Main: React.FC = () => {
   const goldButtons = [
     {
       text: 'Apply for An Internship',
-      link: '/candidates',
+      link: 'https://app.dover.com/jobs/projxon',
     },
     {
       text: 'Become a University Partner',
-      link: '/universities',
+      link: 'https://docs.google.com/forms/u/1/d/e/1FAIpQLSfFujqNvY_1kXTUCCqfNHLLQgu-W17oXtx8Yv3-hYcoXr6X_g/viewform',
     },
     {
       text: 'Design a MIP for My Company',
-      link: '/companies',
+      link: 'https://share.hsforms.com/1y8K29LT1QRa1VT1u2RoWTArx61e',
     },
   ];
 
@@ -82,7 +82,7 @@ export const Main: React.FC = () => {
           </p>
           <div className="flex flex-col md:flex-row gap-4">
             {goldButtons.map((btn, i) => (
-              <a href={btn.link} className="gold-button" key={i}>
+              <a href={btn.link} className="gold-button" target="_blank" key={i}>
                 {btn.text}
               </a>
             ))}
