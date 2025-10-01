@@ -35,7 +35,10 @@ export const About: React.FC = () => {
       <section>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-4">
           {team.map((member, i) => (
-            <div key={i} className="bg-gray-900 rounded-lg p-6 flex flex-col items-center">
+            <div
+              key={i}
+              className="bg-gray-900 rounded-lg p-6 flex flex-col items-center justify-center"
+            >
               {member.image && (
                 <img
                   src={member.image}
