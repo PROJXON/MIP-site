@@ -7,7 +7,7 @@ export default function PageContent({ section }: { section: PageSection }) {
       {typeof section.content === 'string' ? (
         <p className="text-gray-300">{section.content}</p>
       ) : Array.isArray(section.content) ? (
-        <ul className="list-disc list-inside text-gray-300 text-left">
+        <ul className="list-disc list-inside text-gray-300">
           {section.content.map((bullet, ind) => (
             <li key={ind}>{bullet}</li>
           ))}
@@ -22,7 +22,7 @@ export default function PageContent({ section }: { section: PageSection }) {
           <span className="text-yellow-300">– {section.content.name}</span>
         </p>
       ) : (
-        <p className="text-gray-300">section.content</p>
+        <>{section.content}</>
       )}
     </section>
   );

@@ -47,7 +47,7 @@ export const Main: React.FC = () => {
 
   const goldButtons = [
     {
-      text: 'Apply for An Internship',
+      text: 'Apply for an Internship',
       link: 'https://app.dover.com/jobs/projxon',
     },
     {
@@ -55,13 +55,27 @@ export const Main: React.FC = () => {
       link: 'https://docs.google.com/forms/u/1/d/e/1FAIpQLSfFujqNvY_1kXTUCCqfNHLLQgu-W17oXtx8Yv3-hYcoXr6X_g/viewform',
     },
     {
-      text: 'Design a MIP for My Company',
+      text: 'Design a Program for My Company',
       link: 'https://share.hsforms.com/1y8K29LT1QRa1VT1u2RoWTArx61e',
     },
   ];
 
   return (
     <main className="flex-1 bg-black">
+      {/* Features Section */}
+      <section className="py-12 bg-black px-4">
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          {features.map((feature, i) => (
+            <div className="group" key={i}>
+              <h3 className="text-xl font-bold mb-2 text-white">{feature.heading}</h3>
+              <p className="text-gray-400 transition-opacity duration-1000 delay-300 opacity-100">
+                {feature.p}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Hero Section */}
       <section
         className="w-full flex flex-col items-center justify-center py-12 bg-black px-4 relative min-h-[320px]"
@@ -86,20 +100,6 @@ export const Main: React.FC = () => {
               <GoldButton key={i} {...btn} />
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-12 bg-black px-4">
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          {features.map((feature, i) => (
-            <div className="group" key={i}>
-              <h3 className="text-xl font-bold mb-2 text-white">{feature.heading}</h3>
-              <p className="text-gray-400 transition-opacity duration-1000 delay-300 opacity-100">
-                {feature.p}
-              </p>
-            </div>
-          ))}
         </div>
       </section>
 
