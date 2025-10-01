@@ -1,3 +1,5 @@
+import type { ReactNode } from 'react';
+
 export type WPStatus = 'open' | 'closed';
 
 export interface WPBlogPost {
@@ -47,3 +49,11 @@ export interface Testimonial {
   name: string;
   title: string;
 }
+
+export interface PageSection {
+  id: string;
+  heading: string;
+  content: string | string[] | { quote: string; name: string } | ReactNode;
+}
+
+export type ImageLink = `/assets/images/${string}.${'jpg' | 'jpeg' | 'png' | 'webp'}`;

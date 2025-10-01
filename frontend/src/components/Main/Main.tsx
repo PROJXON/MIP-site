@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import Testimonials from '../Testimonials/Testimonials';
 import Blogs from '../Blogs/Blogs';
 import mipHome from '/assets/images/mip-home.jpg';
+import GoldButton from '../GoldButton/GoldButton';
 
 export const Main: React.FC = () => {
   // For animated impact numbers
@@ -82,9 +83,7 @@ export const Main: React.FC = () => {
           </p>
           <div className="flex flex-col md:flex-row gap-4">
             {goldButtons.map((btn, i) => (
-              <a href={btn.link} className="gold-button" target="_blank" key={i}>
-                {btn.text}
-              </a>
+              <GoldButton key={i} {...btn} />
             ))}
           </div>
         </div>
