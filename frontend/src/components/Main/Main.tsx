@@ -29,6 +29,21 @@ export const Main: React.FC = () => {
     });
   }, [metrics]);
 
+  const features = [
+    {
+      heading: 'Candidates',
+      p: 'Real-world growth, leadership, skill stacking',
+    },
+    {
+      heading: 'Universities',
+      p: 'Experiential learning, career readiness',
+    },
+    {
+      heading: 'Companies',
+      p: 'Talent pipeline, innovation, intern ROI',
+    },
+  ];
+
   return (
     <main className="flex-1 bg-black">
       {/* Hero Section */}
@@ -67,27 +82,14 @@ export const Main: React.FC = () => {
       {/* Features Section */}
       <section className="py-12 bg-black px-4">
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          {/* For Companies */}
-          <div className="group">
-            <h3 className="text-xl font-bold mb-2 text-white">For Companies</h3>
-            <p className="text-gray-400 transition-opacity duration-1000 delay-300 opacity-100">
-              Talent pipeline, innovation, intern ROI
-            </p>
-          </div>
-          {/* For Universities */}
-          <div className="group">
-            <h3 className="text-xl font-bold mb-2 text-white">For Universities</h3>
-            <p className="text-gray-400 transition-opacity duration-1000 delay-500 opacity-100">
-              Experiential learning, career readiness
-            </p>
-          </div>
-          {/* For Interns */}
-          <div className="group">
-            <h3 className="text-xl font-bold mb-2 text-white">For Interns</h3>
-            <p className="text-gray-400 transition-opacity duration-1000 delay-700 opacity-100">
-              Real-world growth, leadership, skill stacking
-            </p>
-          </div>
+          {features.map((feature, i) => (
+            <div className="group" key={i}>
+              <h3 className="text-xl font-bold mb-2 text-white">{feature.heading}</h3>
+              <p className="text-gray-400 transition-opacity duration-1000 delay-300 opacity-100">
+                {feature.p}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 
