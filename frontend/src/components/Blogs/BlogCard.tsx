@@ -1,4 +1,3 @@
-import blogDefaultImg from '../../../public/assets/images/default-blog-img.webp';
 import './BlogCard.css';
 import type { WPBlogPost } from '../../types.ts';
 
@@ -10,9 +9,6 @@ const BlogCard = ({ blog, blogStyle }: { blog: WPBlogPost; blogStyle?: string })
       day: 'numeric',
     });
   };
-
-  const featuredMedia = blog._embedded?.['wp:featuredmedia'];
-  const sourceUrl = featuredMedia?.[0]?.source_url || blogDefaultImg;
 
   return (
     <li key={blog.id} data-aos="fade-up" className="max-w-lg w-[400px] mx-auto">
@@ -28,9 +24,7 @@ const BlogCard = ({ blog, blogStyle }: { blog: WPBlogPost; blogStyle?: string })
           </a>
 
           <div className="d-flex align-items-center gap-2 mt-1">
-            <span className={blogStyle === 'dark' ? 'text-gray-400' : 'text-muted'}>
-              {blog._embedded?.author?.[0]?.name}
-            </span>
+            <span className={blogStyle === 'dark' ? 'text-gray-400' : 'text-muted'}>MIP</span>
             <span
               className={`${blogStyle === 'dark' ? 'text-gray-600' : 'text-muted'} dot-seperator fs-6`}
             >
