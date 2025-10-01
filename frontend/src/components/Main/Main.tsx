@@ -44,6 +44,21 @@ export const Main: React.FC = () => {
     },
   ];
 
+  const goldButtons = [
+    {
+      text: 'Apply for An Internship',
+      link: '/candidates',
+    },
+    {
+      text: 'Become a University Partner',
+      link: '/universities',
+    },
+    {
+      text: 'Design a MIP for My Company',
+      link: '/companies',
+    },
+  ];
+
   return (
     <main className="flex-1 bg-black">
       {/* Hero Section */}
@@ -66,15 +81,11 @@ export const Main: React.FC = () => {
             Custom-designed internship programs that create future-ready leaders
           </p>
           <div className="flex flex-col md:flex-row gap-4">
-            {/* <a href="#companies" className="gold-button">
-              Design a MIP for My Company
-            </a>
-            <a href="#universities" className="gold-button">
-              Become a University Partner
-            </a>
-            <a href="#interns" className="gold-button">
-              Apply for An Internship
-            </a> */}
+            {goldButtons.map((btn, i) => (
+              <a href={btn.link} className="gold-button" key={i}>
+                {btn.text}
+              </a>
+            ))}
           </div>
         </div>
       </section>
