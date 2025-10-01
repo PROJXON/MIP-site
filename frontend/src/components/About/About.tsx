@@ -12,11 +12,6 @@ export const About: React.FC = () => {
       title: 'Program Director',
       image: '/assets/images/team/javier.webp',
     },
-    {
-      name: 'Katie White',
-      title: 'Partnerships Lead',
-      image: '#',
-    },
   ];
 
   return (
