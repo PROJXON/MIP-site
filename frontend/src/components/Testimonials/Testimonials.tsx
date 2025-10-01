@@ -3,6 +3,8 @@ import useWPFetch from '../../hooks/useWPFetch.ts';
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner.tsx';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 export default function Testimonials() {
   const [testimonials, loading] = useWPFetch<Testimonial>('testimonials');
@@ -14,7 +16,7 @@ export default function Testimonials() {
         <LoadingSpinner />
       ) : testimonials.length > 0 ? (
         <Swiper
-          spaceBetween={1}
+          spaceBetween={20}
           slidesPerView={1}
           breakpoints={{
             640: { slidesPerView: 1 },
