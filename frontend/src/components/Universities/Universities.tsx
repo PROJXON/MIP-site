@@ -20,7 +20,7 @@ export const Universities: React.FC = () => {
     },
     {
       id: 'journey',
-      heading: 'Candidate journey',
+      heading: 'Candidate Journey',
       content:
         'Students participate in hands-on projects, collaborate with industry professionals, and receive mentorship throughout their internship. The journey includes onboarding, project work, regular feedback, and a final showcase of achievements.',
     },

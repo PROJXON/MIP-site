@@ -57,3 +57,11 @@ export interface PageSection {
 }
 
 export type ImageLink = `/assets/images/${string}.${'jpg' | 'jpeg' | 'png' | 'webp'}`;
+
+export interface ContactFormInputType {
+  name: string;
+  email: string;
+  senderOccupation: string;
+  message: string;
+  heardAbout: string;
+}
