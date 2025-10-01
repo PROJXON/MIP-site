@@ -57,7 +57,7 @@ export default function Page({
 
       {sections.map((sectionOrGroup, i) =>
         Array.isArray(sectionOrGroup) ? (
-          <div key={i} className={`grid grid-cols-${sectionOrGroup.length} gap-6`}>
+          <div key={i} className={`grid grid-cols-${sectionOrGroup.length}`}>
             {sectionOrGroup.map((section, j) => (
               <PageContent section={section} key={j} />
             ))}

@@ -59,7 +59,7 @@ export const Navigation: React.FC = () => {
           <li key={i}>
             <Link
               to={link.to}
-              className="hover:text-yellow-400 transition"
+              className={`hover:text-yellow-400 transition${window.location.pathname === link.to ? ' text-yellow-400' : ''}`}
               onClick={() => setOpen(false)}
             >
               {link.text}
