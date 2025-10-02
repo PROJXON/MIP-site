@@ -14,7 +14,7 @@ export default function Blogs() {
         <LoadingSpinner />
       ) : blogs.length > 0 ? (
         <>
-          <ul className="blog-list list-unstyled flex flex-wrap justify-center gap-6 my-5 px-6 max-w-7xl mx-auto">
+          <ul className="blog-list list-unstyled flex flex-wrap justify-center gap-6 my-10 px-6 max-w-7xl mx-auto">
             {/* {blogs.slice(0, visibleBlogs).map((blog, index) => (
                 <BlogCard blog={blog} key={index} />
               ))} */}
