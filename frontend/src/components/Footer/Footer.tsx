@@ -10,18 +10,24 @@ export const Footer: React.FC = () => {
         {/* Left: Logo & Legal & Copyright */}
         <div className="flex flex-col items-center md:items-start justify-end">
           <div className="flex items-center mb-2">
-            <img
-              src={projxonMipLogo}
-              alt="PROJXON Logo"
-              className="h-20 w-20 mr-2"
-            />
-            <span className="text-sm text-yellow-500 font-bold tracking-wide">Powered by PROJXON</span>
+            <img src={projxonMipLogo} alt="PROJXON Logo" className="h-20 w-20 mr-2" />
+            <span className="text-sm text-yellow-500 font-bold tracking-wide">
+              Powered by{' '}
+              <a
+                href="https://www.projxon.com/"
+                className="text-white underline hover:opacity-80 transition"
+              >
+                PROJXON
+              </a>
+            </span>
           </div>
           {/* <div className="flex space-x-4 text-gray-400 text-sm mb-1">
             <a href="/privacy" className="hover:text-yellow-400">Privacy Policy</a>
             <a href="/terms" className="hover:text-yellow-400">Terms of Service</a>
           </div> */}
-          <div className="mt-1 text-gray-500 text-xs">&copy; 2025 PROJXON. All rights reserved.</div>
+          <div className="mt-1 text-gray-500 text-xs">
+            &copy; 2025 PROJXON. All rights reserved.
+          </div>
         </div>
         {/* Right: Social & Contact */}
         <div className="flex flex-col items-center md:items-end gap-2">
@@ -43,7 +49,6 @@ export const Footer: React.FC = () => {
               <img src={emailIcon} alt="Email" className="w-7 h-7" />
             </a>
           </div>
-          
         </div>
       </div>
     </footer>

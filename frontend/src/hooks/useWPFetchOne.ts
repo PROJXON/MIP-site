@@ -1,27 +1,40 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-export default function useWPFetch<T>(route: string): [T[], boolean] {
-  const [blogs, setBlogs] = useState<T[]>([]);
+export default function useWPFetchOne<T>(route: string): [T | null, boolean] {
+  const [item, setItem] = useState<T | null>(null);
   const [loading, setLoading] = useState(true);
+
   const API_BASE_URL =
     typeof window !== 'undefined' && window.location.hostname === 'localhost'
       ? 'http://localhost:5050'
       : 'https://api.momentuminternshipprogram.com';
 
   useEffect(() => {
+    let isMounted = true;
+
     (async () => {
       try {
         const response = await fetch(`${API_BASE_URL}/api/${route}`);
-        if (!response.ok) {throw new Error(`Error: ${response.statusText}`);}
+        if (!response.ok) {
+          throw new Error(`Error: ${response.statusText}`);
+        }
         const data = await response.json();
-        setBlogs(data);
+        if (isMounted) {
+          setItem(data);
+        }
       } catch (err) {
         console.error(err instanceof Error ? err.message : 'Unknown error');
       } finally {
-        setLoading(false);
+        if (isMounted) {
+          setLoading(false);
+        }
       }
     })();
-  }, [API_BASE_URL, route]);
 
-  return [blogs, loading];
+    return () => {
+      isMounted = false;
+    };
+  }, [route, API_BASE_URL]);
+
+  return [item, loading];
 }

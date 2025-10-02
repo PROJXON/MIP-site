@@ -5,13 +5,23 @@
 html,
 body {
   @apply bg-black text-white min-h-screen m-0 p-0;
+  font-family:
+    'Inter',
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Helvetica,
+    Arial,
+    'Apple Color Emoji',
+    'Segoe UI Emoji';
 }
 #root {
   @apply min-h-screen;
 }
 
 .gold-button {
-  @apply px-6 py-3 bg-yellow-500 text-black rounded-lg text-base font-semibold hover:bg-yellow-400 transition text-center;
+  @apply px-6 py-3 bg-yellow-500 text-black rounded-lg text-base font-semibold hover:bg-yellow-400 transition text-center block;
 }
 
 .swiper-button-next,

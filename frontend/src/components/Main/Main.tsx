@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import Testimonials from '../Testimonials/Testimonials';
 import Blogs from '../Blogs/Blogs';
 import mipHome from '/assets/images/mip-home.jpg';
+import GoldButton from '../GoldButton/GoldButton';
 
 export const Main: React.FC = () => {
   // For animated impact numbers
@@ -29,6 +30,28 @@ export const Main: React.FC = () => {
     });
   }, [metrics]);
 
+  const features = [
+    {
+      heading: 'Candidates',
+      p: 'Real-world growth, leadership, skill stacking',
+      buttonText: "I'd Like to Apply!",
+      buttonLink: 'https://app.dover.com/jobs/projxon',
+    },
+    {
+      heading: 'Universities',
+      p: 'Experiential learning, career readiness',
+      buttonText: 'We Want to Partner',
+      buttonLink:
+        'https://docs.google.com/forms/u/1/d/e/1FAIpQLSfFujqNvY_1kXTUCCqfNHLLQgu-W17oXtx8Yv3-hYcoXr6X_g/viewform',
+    },
+    {
+      heading: 'Companies',
+      p: 'Talent pipeline, innovation, intern ROI',
+      buttonText: 'Design a Program for Us!',
+      buttonLink: 'https://share.hsforms.com/1y8K29LT1QRa1VT1u2RoWTArx61e',
+    },
+  ];
+
   return (
     <main className="flex-1 bg-black">
       {/* Hero Section */}
@@ -50,44 +73,25 @@ export const Main: React.FC = () => {
           <p className="mb-6 text-white max-w-xl text-center">
             Custom-designed internship programs that create future-ready leaders
           </p>
-          <div className="flex flex-col md:flex-row gap-4">
-            {/* <a href="#companies" className="gold-button">
-              Design a MIP for My Company
-            </a>
-            <a href="#universities" className="gold-button">
-              Become a University Partner
-            </a>
-            <a href="#interns" className="gold-button">
-              Apply for An Internship
-            </a> */}
-          </div>
         </div>
       </section>
 
       {/* Features Section */}
       <section className="py-12 bg-black px-4">
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          {/* For Companies */}
-          <div className="group">
-            <h3 className="text-xl font-bold mb-2 text-white">For Companies</h3>
-            <p className="text-gray-400 transition-opacity duration-1000 delay-300 opacity-100">
-              Talent pipeline, innovation, intern ROI
-            </p>
-          </div>
-          {/* For Universities */}
-          <div className="group">
-            <h3 className="text-xl font-bold mb-2 text-white">For Universities</h3>
-            <p className="text-gray-400 transition-opacity duration-1000 delay-500 opacity-100">
-              Experiential learning, career readiness
-            </p>
-          </div>
-          {/* For Interns */}
-          <div className="group">
-            <h3 className="text-xl font-bold mb-2 text-white">For Interns</h3>
-            <p className="text-gray-400 transition-opacity duration-1000 delay-700 opacity-100">
-              Real-world growth, leadership, skill stacking
-            </p>
-          </div>
+          {features.map((feature, i) => (
+            <div className="flex flex-col" key={i}>
+              <h3 className="text-xl font-bold mb-4 text-white">{feature.heading}</h3>
+              <div className="flex flex-1 items-center">
+                <GoldButton
+                  key={i}
+                  link={feature.buttonLink}
+                  text={feature.buttonText}
+                  additionalClasses="m-auto"
+                />
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -97,7 +101,7 @@ export const Main: React.FC = () => {
           {metrics.map((metric, i) => (
             <span
               key={metric.label}
-              className={`text-lg md:text-lg font-bold text-yellow-500 transition-opacity duration-700 ${showMetrics[i] ? 'opacity-100' : 'opacity-0'}`}
+              className={`text-2xl md:text-3xl font-bold text-yellow-500 transition-opacity duration-700 ${showMetrics[i] ? 'opacity-100' : 'opacity-0'}`}
               style={{ transitionDelay: `${i * 300}ms` }}
             >
               {metric.label}

@@ -3,11 +3,12 @@ import { Routes, Route } from 'react-router-dom';
 import { Footer } from '../Footer/Footer';
 import { Main } from '../Main/Main';
 import { Header } from '../Header/Header';
-import { ForCompanies } from '../ForCompanies/ForCompanies';
+import { Companies } from '../Companies/Companies';
 import { About } from '../About/About';
-import { ForUniversities } from '../ForUniversities/ForUniversities';
-import { ForInterns } from '../ForInterns/ForInterns';
+import { Universities } from '../Universities/Universities';
+import { Candidates } from '../Candidates/Candidates';
 import { Contact } from '../Contact/Contact';
+import BlogPage from '../BlogPage/BlogPage';
 
 function App() {
   return (
@@ -16,10 +17,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/about" element={<About />} />
-        <Route path="/companies" element={<ForCompanies />} />
-        <Route path="/universities" element={<ForUniversities />} />
-        <Route path="/interns" element={<ForInterns />} />
+        <Route path="/companies" element={<Companies />} />
+        <Route path="/universities" element={<Universities />} />
+        <Route path="/candidates" element={<Candidates />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/blogs/:blogId" element={<BlogPage />} />
       </Routes>
       <Footer />
     </div>

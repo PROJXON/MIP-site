@@ -1,3 +1,5 @@
+import type { ReactNode } from 'react';
+
 export type WPStatus = 'open' | 'closed';
 
 export interface WPBlogPost {
@@ -32,7 +34,11 @@ export interface WPBlogPost {
   type: string;
   template: string;
   title: WPPostContent;
-  [prop: string]: any;
+  _embedded?: {
+    author?: Array<{ name?: string }>;
+    'wp:featuredmedia'?: Array<{ source_url?: string }>;
+    [key: string]: unknown;
+  };
 }
 
 export interface WPPostContent {
@@ -46,4 +52,20 @@ export interface Testimonial {
   quote: string;
   name: string;
   title: string;
+}
+
+export interface PageSection {
+  id: string;
+  heading: string;
+  content: string | string[] | { quote: string; name: string } | ReactNode;
+}
+
+export type ImageLink = `/assets/images/${string}.${'jpg' | 'jpeg' | 'png' | 'webp'}`;
+
+export interface ContactFormInputType {
+  name: string;
+  email: string;
+  senderOccupation: string;
+  message: string;
+  heardAbout: string;
 }
