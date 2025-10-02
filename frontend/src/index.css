@@ -5,6 +5,7 @@
 html,
 body {
   @apply bg-black text-white min-h-screen m-0 p-0;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
 }
 #root {
   @apply min-h-screen;
