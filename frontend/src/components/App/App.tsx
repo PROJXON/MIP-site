@@ -8,6 +8,7 @@ import { About } from '../About/About';
 import { Universities } from '../Universities/Universities';
 import { Candidates } from '../Candidates/Candidates';
 import { Contact } from '../Contact/Contact';
+import BlogPage from '../BlogPage/BlogPage';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/universities" element={<Universities />} />
         <Route path="/candidates" element={<Candidates />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/blogs/:blogId" element={<BlogPage />} />
       </Routes>
       <Footer />
     </div>

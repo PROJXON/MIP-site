@@ -1,0 +1,138 @@
+mark{
+  padding: 0px;
+}
+
+.blogpage-img {
+  width: 25%; 
+  height: auto; 
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.blog-container {
+  word-break: break-word;
+  text-align: left;
+}
+
+.blog-container p{
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin: 1rem 0;
+}
+
+.wp-block-heading{
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Ensure headings are larger than paragraph text */
+.blog-container h1 { font-size: 2rem; }
+.blog-container h2 { font-size: 1.75rem; }
+.blog-container h3 { font-size: 1.5rem; }
+.blog-container h4 { font-size: 1.375rem; }
+.blog-container h5 { font-size: 1.25rem; }
+.blog-container h6 { font-size: 1.25rem; }
+
+/* If Gutenberg outputs .wp-block-heading on various levels, keep it clearly above paragraph size */
+.blog-container .wp-block-heading { font-size: 1.5rem; }
+
+.blog-container .wp-block-image img{
+  width: 100%;
+  height: auto;
+}
+
+/* General rich text defaults */
+.blog-container h1,
+.blog-container h2,
+.blog-container h3,
+.blog-container h4,
+.blog-container h5,
+.blog-container h6 {
+  line-height: 1.3;
+  margin: 1.5rem 0 0.75rem;
+}
+
+.blog-container a {
+  color: #facc15; /* Tailwind yellow-400 */
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.blog-container a:hover {
+  color: #eab308; /* Tailwind yellow-500 */
+}
+
+.blog-container ul,
+.blog-container ol {
+  margin: 1rem 0;
+  padding-left: 1.25rem;
+}
+
+.blog-container ul {
+  list-style: disc;
+}
+
+.blog-container ol {
+  list-style: decimal;
+}
+
+.blog-container li {
+  margin: 0.5rem 0;
+}
+
+.blog-container blockquote {
+  border-left: 4px solid #facc15;
+  padding-left: 1rem;
+  color: #9ca3af; /* Tailwind gray-400 */
+  margin: 1.25rem 0;
+  font-style: italic;
+}
+
+.blog-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.blog-container figure {
+  margin: 1.25rem 0;
+}
+
+.blog-container figcaption {
+  color: #9ca3af;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.blog-container pre {
+  background-color: #111827; /* Tailwind gray-900 */
+  color: #e5e7eb; /* Tailwind gray-200 */
+  padding: 1rem;
+  border-radius: 6px;
+  overflow: auto;
+  margin: 1rem 0;
+}
+
+.blog-container code {
+  background-color: #111827;
+  color: #e5e7eb;
+  padding: 0.125rem 0.375rem;
+  border-radius: 4px;
+}
+
+.blog-container hr {
+  border-color: #374151; /* Tailwind gray-700 */
+  margin: 2rem 0;
+}
+
+.blogpage-date{
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .blog-container {
+    width: 100% !important;
+  }
+}
