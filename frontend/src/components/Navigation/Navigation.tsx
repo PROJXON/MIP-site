@@ -1,9 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Sling as Hamburger } from 'hamburger-react';
 
 export const Navigation: React.FC = () => {
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    function closeMobileMenu() {
+      if (window.innerWidth >= 768) setOpen(false);
+    }
+
+    closeMobileMenu();
+
+    window.addEventListener('resize', closeMobileMenu);
+    return () => window.removeEventListener('resize', closeMobileMenu);
+  }, []);
 
   const navLinks = [
     {
