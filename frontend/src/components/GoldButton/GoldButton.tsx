@@ -5,7 +5,7 @@ export default function GoldButton({
 }: {
   link: string;
   text: string;
-  additionalClasses?: string;
+  additionalClasses: string;
 }) {
   return (
     <a href={link} className={`gold-button ${additionalClasses}`} target="_blank">

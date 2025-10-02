@@ -34,48 +34,26 @@ export const Main: React.FC = () => {
     {
       heading: 'Candidates',
       p: 'Real-world growth, leadership, skill stacking',
+      buttonText: 'Apply for an Internship',
+      buttonLink: 'https://app.dover.com/jobs/projxon',
     },
     {
       heading: 'Universities',
       p: 'Experiential learning, career readiness',
+      buttonText: 'Become a University Partner',
+      buttonLink:
+        'https://docs.google.com/forms/u/1/d/e/1FAIpQLSfFujqNvY_1kXTUCCqfNHLLQgu-W17oXtx8Yv3-hYcoXr6X_g/viewform',
     },
     {
       heading: 'Companies',
       p: 'Talent pipeline, innovation, intern ROI',
-    },
-  ];
-
-  const goldButtons = [
-    {
-      text: 'Apply for an Internship',
-      link: 'https://app.dover.com/jobs/projxon',
-    },
-    {
-      text: 'Become a University Partner',
-      link: 'https://docs.google.com/forms/u/1/d/e/1FAIpQLSfFujqNvY_1kXTUCCqfNHLLQgu-W17oXtx8Yv3-hYcoXr6X_g/viewform',
-    },
-    {
-      text: 'Design a Program for My Company',
-      link: 'https://share.hsforms.com/1y8K29LT1QRa1VT1u2RoWTArx61e',
+      buttonText: 'Design a Program for My Company',
+      buttonLink: 'https://share.hsforms.com/1y8K29LT1QRa1VT1u2RoWTArx61e',
     },
   ];
 
   return (
     <main className="flex-1 bg-black">
-      {/* Features Section */}
-      <section className="py-12 bg-black px-4">
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          {features.map((feature, i) => (
-            <div className="group" key={i}>
-              <h3 className="text-xl font-bold mb-2 text-white">{feature.heading}</h3>
-              <p className="text-gray-400 transition-opacity duration-1000 delay-300 opacity-100">
-                {feature.p}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* Hero Section */}
       <section
         className="w-full flex flex-col items-center justify-center py-12 bg-black px-4 relative min-h-[320px]"
@@ -95,11 +73,25 @@ export const Main: React.FC = () => {
           <p className="mb-6 text-white max-w-xl text-center">
             Custom-designed internship programs that create future-ready leaders
           </p>
-          <div className="flex flex-col md:flex-row gap-4">
-            {goldButtons.map((btn, i) => (
-              <GoldButton key={i} {...btn} />
-            ))}
-          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-12 bg-black px-4">
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          {features.map((feature, i) => (
+            <div className="flex flex-col" key={i}>
+              <h3 className="text-xl font-bold mb-4 text-white">{feature.heading}</h3>
+              <div className="flex flex-1 items-center">
+                <GoldButton
+                  key={i}
+                  link={feature.buttonLink}
+                  text={feature.buttonText}
+                  additionalClasses="m-auto"
+                />
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
