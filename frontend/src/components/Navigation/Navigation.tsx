@@ -31,7 +31,7 @@ export const Navigation: React.FC = () => {
   return (
     <nav className="relative">
       {/* Hamburger Icon for mobile */}
-      <div className="md:hidden absolute -right-4 top-2 z-20">
+      <div className="md:hidden absolute -right-6 bottom-0 z-20">
         <Hamburger
           toggled={open}
           toggle={setOpen}
@@ -43,8 +43,8 @@ export const Navigation: React.FC = () => {
       </div>
       {/* Navigation Links */}
       <ul
-        className={`flex-col md:flex-row md:flex items-end md:items-center space-y-2 md:space-y-0 space-x-0 md:space-x-8 text-sm md:text-base font-medium absolute md:static top-12 w-full md:w-auto z-10 transition-all ${
-          open ? 'flex left-0 bg-black' : 'hidden md:flex left-0'
+        className={`flex-col md:flex-row md:flex items-end md:items-center space-y-2 md:space-y-0 space-x-0 md:space-x-8 text-sm md:text-base font-medium absolute md:static w-full md:w-auto z-10 transition-all w-auto p-2 -top-2 -right-3 ${
+          open ? 'flex bg-black' : 'hidden md:flex'
         }`}
       >
         {navLinks.map((link, i) => (

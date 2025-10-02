@@ -15,7 +15,7 @@ export const Header: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
   return (
-    <header className="sticky top-0 z-50 py-4 border-b border-gray-800 bg-black px-4">
+    <header className="sticky top-0 z-50 md:py-4 border-b border-gray-800 bg-black px-4">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link to="/" className="flex items-center">
           <div
