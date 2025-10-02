@@ -3,8 +3,7 @@ import useWPFetch from '../../hooks/useWPFetch.ts';
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner.tsx';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
+import 'swiper/swiper-bundle.css';
 
 export default function Testimonials() {
   const [testimonials, loading] = useWPFetch<Testimonial>('testimonials');

@@ -1,9 +1,7 @@
 import { useParams } from 'react-router-dom';
 import type { WPBlogPost } from '../../types.ts';
 import useWPFetchOne from '../../hooks/useWPFetchOne';
-
-import defaultImg from '../../../public/assets/images/projxon-mip-logo.png';
-
+import defaultImg from '/assets/images/projxon-mip-logo.png';
 import './BlogPage.css';
 
 const BlogPage = () => {
@@ -43,16 +41,18 @@ const BlogPage = () => {
 
   return (
     <>
-      <div className='mx-auto blog-container px-3'>
-        <article className='my-5 py-2'>
+      <div className="mx-auto blog-container px-3">
+        <article className="my-5 py-2">
           <header>
-            <h1 className='font-bold'>{blog.title.rendered}</h1>
+            <h1 className="font-bold">{blog.title.rendered}</h1>
 
             <div className="flex items-center justify-content-between mb-3 blogpage-date mt-3">
               <p className="font-semibold text-base">Momentum Internship Program</p>
               <span className="mx-2" aria-hidden="true"></span>
               <div className="flex items-center text-gray-500 gap-1">
-                <time dateTime={String(blog.date)} className='text-gray-500'>{formatDate(String(blog.date))}</time>
+                <time dateTime={String(blog.date)} className="text-gray-500">
+                  {formatDate(String(blog.date))}
+                </time>
               </div>
             </div>
           </header>
@@ -63,7 +63,7 @@ const BlogPage = () => {
             alt={blog.title.rendered}
           />
 
-          <div className='mt-5' dangerouslySetInnerHTML={{ __html: sanitizedHtml }} />
+          <div className="mt-5" dangerouslySetInnerHTML={{ __html: sanitizedHtml }} />
         </article>
       </div>
     </>

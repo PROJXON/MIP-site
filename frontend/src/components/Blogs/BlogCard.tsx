@@ -10,7 +10,7 @@ const BlogCard = ({ blog, blogStyle }: { blog: WPBlogPost; blogStyle?: string })
     });
   };
 
-  const sourceUrl = '../../../public/assets/images/projxon-mip-logo.png';
+  const sourceUrl = '/assets/images/projxon-mip-logo.png';
 
   return (
     <li key={blog.id} data-aos="fade-up" className="max-w-lg w-[400px] mx-auto">
@@ -18,7 +18,11 @@ const BlogCard = ({ blog, blogStyle }: { blog: WPBlogPost; blogStyle?: string })
         className={`overflow-hidden blog-card h-full border border-yellow-500 ${blogStyle === 'dark' ? 'bg-black' : 'bg-light'}`}
       >
         <a href={`/blogs/${blog.id}`}>
-          <img className="blog-img w-100 object-fit-cover" src={sourceUrl} alt={blog.title.rendered} />
+          <img
+            className="blog-img w-100 object-fit-cover"
+            src={sourceUrl}
+            alt={blog.title.rendered}
+          />
         </a>
 
         <div className={`d-flex flex-column blog-card-body p-3 ${blogStyle === 'dark' && 'px-0'}`}>
