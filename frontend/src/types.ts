@@ -34,7 +34,11 @@ export interface WPBlogPost {
   type: string;
   template: string;
   title: WPPostContent;
-  [prop: string]: any;
+  _embedded?: {
+    author?: Array<{ name?: string }>;
+    'wp:featuredmedia'?: Array<{ source_url?: string }>;
+    [key: string]: unknown;
+  };
 }
 
 export interface WPPostContent {

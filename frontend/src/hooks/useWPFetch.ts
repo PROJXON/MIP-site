@@ -12,7 +12,7 @@ export default function useWPFetch<T>(route: string): [T[], boolean] {
     (async () => {
       try {
         const response = await fetch(`${API_BASE_URL}/api/${route}`);
-        if (!response.ok) throw new Error(`Error: ${response.statusText}`);
+        if (!response.ok) {throw new Error(`Error: ${response.statusText}`);}
         const data = await response.json();
         setBlogs(data);
       } catch (err) {
@@ -21,7 +21,7 @@ export default function useWPFetch<T>(route: string): [T[], boolean] {
         setLoading(false);
       }
     })();
-  }, []);
+  }, [API_BASE_URL, route]);
 
   return [blogs, loading];
 }
