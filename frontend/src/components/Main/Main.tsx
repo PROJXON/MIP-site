@@ -34,20 +34,20 @@ export const Main: React.FC = () => {
     {
       heading: 'Candidates',
       p: 'Real-world growth, leadership, skill stacking',
-      buttonText: 'Apply for an Internship',
+      buttonText: "I'd Like to Apply!",
       buttonLink: 'https://app.dover.com/jobs/projxon',
     },
     {
       heading: 'Universities',
       p: 'Experiential learning, career readiness',
-      buttonText: 'Become a University Partner',
+      buttonText: 'We Want to Partner',
       buttonLink:
         'https://docs.google.com/forms/u/1/d/e/1FAIpQLSfFujqNvY_1kXTUCCqfNHLLQgu-W17oXtx8Yv3-hYcoXr6X_g/viewform',
     },
     {
       heading: 'Companies',
       p: 'Talent pipeline, innovation, intern ROI',
-      buttonText: 'Design a Program for My Company',
+      buttonText: 'Design a Program for Us!',
       buttonLink: 'https://share.hsforms.com/1y8K29LT1QRa1VT1u2RoWTArx61e',
     },
   ];
