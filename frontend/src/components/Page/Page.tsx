@@ -14,6 +14,21 @@ export default function Page({
   };
   sections: (PageSection | PageSection[])[];
 }) {
+  const gridColsClass = (n: number) => {
+    switch (n) {
+      case 1:
+        return 'grid-cols-1';
+      case 2:
+        return 'grid-cols-2';
+      case 3:
+        return 'grid-cols-3';
+      case 4:
+        return 'grid-cols-4';
+      default:
+        return 'grid-cols-1';
+    }
+  };
+
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Header Banner */}
@@ -57,7 +72,7 @@ export default function Page({
 
       {sections.map((sectionOrGroup, i) =>
         Array.isArray(sectionOrGroup) ? (
-          <div key={i} className={`grid grid-cols-${sectionOrGroup.length}`}>
+          <div key={i} className={`grid ${gridColsClass(sectionOrGroup.length)}`}>
             {sectionOrGroup.map((section, j) => (
               <PageContent section={section} key={j} />
             ))}

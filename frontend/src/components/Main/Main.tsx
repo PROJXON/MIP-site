@@ -101,7 +101,7 @@ export const Main: React.FC = () => {
           {metrics.map((metric, i) => (
             <span
               key={metric.label}
-              className={`text-lg md:text-lg font-bold text-yellow-500 transition-opacity duration-700 ${showMetrics[i] ? 'opacity-100' : 'opacity-0'}`}
+              className={`text-2xl md:text-3xl font-bold text-yellow-500 transition-opacity duration-700 ${showMetrics[i] ? 'opacity-100' : 'opacity-0'}`}
               style={{ transitionDelay: `${i * 300}ms` }}
             >
               {metric.label}

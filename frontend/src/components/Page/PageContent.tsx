@@ -7,7 +7,7 @@ export default function PageContent({ section }: { section: PageSection }) {
       {typeof section.content === 'string' ? (
         <p className="text-gray-300">{section.content}</p>
       ) : Array.isArray(section.content) ? (
-        <ul className="list-disc list-inside text-gray-300">
+        <ul className="list-disc list-inside text-gray-300 inline-block text-left">
           {section.content.map((bullet, ind) => (
             <li key={ind}>{bullet}</li>
           ))}

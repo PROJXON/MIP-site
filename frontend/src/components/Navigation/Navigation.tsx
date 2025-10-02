@@ -31,8 +31,15 @@ export const Navigation: React.FC = () => {
   return (
     <nav className="relative">
       {/* Hamburger Icon for mobile */}
-      <div className="md:hidden absolute right-4 top-2 z-20">
-        <Hamburger toggled={open} toggle={setOpen} size={24} rounded label="Toggle menu" color="#facc15" />
+      <div className="md:hidden absolute -right-4 top-2 z-20">
+        <Hamburger
+          toggled={open}
+          toggle={setOpen}
+          size={24}
+          rounded
+          label="Toggle menu"
+          color="#facc15"
+        />
       </div>
       {/* Navigation Links */}
       <ul
