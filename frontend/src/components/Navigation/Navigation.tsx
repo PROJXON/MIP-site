@@ -54,7 +54,7 @@ export const Navigation: React.FC = () => {
       </div>
       {/* Navigation Links */}
       <ul
-        className={`flex-col md:flex-row md:flex items-end md:items-center space-y-2 md:space-y-0 space-x-0 md:space-x-8 text-sm md:text-base font-medium absolute md:static w-auto z-10 transition-all w-auto p-2 -top-2 -right-4 ${
+        className={`flex-col md:flex-row md:flex items-end md:items-center space-y-2 md:space-y-0 space-x-0 md:space-x-8 text-sm md:text-base font-medium absolute md:static z-10 transition-all w-auto p-2 -top-2 -right-4 ${
           open ? 'flex bg-zinc-500/30 rounded-xl' : 'hidden md:flex'
         }`}
       >
