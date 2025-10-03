@@ -59,7 +59,7 @@ export const Companies: React.FC = () => {
 
   return (
     <Page
-      hero={{ pic: dreamBig as ImageLink, h1: 'Future Leaders. Built for your business' }}
+      hero={{ pic: dreamBig as ImageLink, h1: 'Future Leaders built for your business' }}
       sections={sections}
     />
   );
