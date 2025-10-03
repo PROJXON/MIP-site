@@ -11,8 +11,8 @@ export function Contact(): JSX.Element {
 
   return (
     <div className="w-full md:max-w-xl mx-auto pt-6 md:py-12 md:px-4 text-white">
-      <h2 className="text-3xl font-bold mb-6 text-yellow-400">Contact Us</h2>
-      <label className="block mb-4 text-lg font-semibold">
+      <h2 className="text-3xl font-bold mb-6 text-yellow-400 md:w-[500px]">Contact Us</h2>
+      <label className="block mb-4 text-lg font-semibold md:w-[500px]">
         I am a
         <select
           value={role}
