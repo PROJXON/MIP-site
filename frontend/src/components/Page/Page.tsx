@@ -16,16 +16,14 @@ export default function Page({
 }) {
   const gridColsClass = (n: number) => {
     switch (n) {
-      case 1:
-        return 'grid-cols-1';
       case 2:
-        return 'grid-cols-2';
+        return 'md:grid-cols-2 max-w-4xl';
       case 3:
-        return 'grid-cols-3';
+        return 'md:grid-cols-3';
       case 4:
-        return 'grid-cols-4';
+        return 'md:grid-cols-4';
       default:
-        return 'grid-cols-1';
+        return 'md:grid-cols-1';
     }
   };
 
@@ -72,7 +70,7 @@ export default function Page({
 
       {sections.map((sectionOrGroup, i) =>
         Array.isArray(sectionOrGroup) ? (
-          <div key={i} className={`grid ${gridColsClass(sectionOrGroup.length)}`}>
+          <div key={i} className={`grid ${gridColsClass(sectionOrGroup.length)} m-auto`}>
             {sectionOrGroup.map((section, j) => (
               <PageContent section={section} key={j} />
             ))}
