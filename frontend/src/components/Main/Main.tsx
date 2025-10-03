@@ -8,10 +8,10 @@ export const Main: React.FC = () => {
   // For animated impact numbers
   const metrics = useMemo(
     () => [
-      { label: '100+ Interns Trained' },
-      { label: '92% Conversion' },
-      { label: '15 Partner Campuses' },
-      { label: '9 Industries' },
+      { label: '200+ Interns Trained' },
+      { label: '84% Conversion' },
+      { label: '25 Partner Campuses' },
+      { label: '14 Industries' },
     ],
     []
   );
