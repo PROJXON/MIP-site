@@ -18,7 +18,7 @@ export const About: React.FC = () => {
   ];
 
   return (
-    <div className="max-w-4xl mx-auto py-12 px-4 bg-black text-white">
+    <div className="max-w-4xl mx-auto py-12 px-4 text-white">
       {/* Our Approach Section */}
       <section className="mb-12">
         <h2 className="text-3xl font-bold mb-4 text-yellow-400">Our Approach</h2>
@@ -37,7 +37,7 @@ export const About: React.FC = () => {
           {team.map((member, i) => (
             <div
               key={i}
-              className="bg-gray-900 rounded-lg p-6 flex flex-col items-center justify-center"
+              className="bg-[#424242] rounded-lg p-6 flex flex-col items-center justify-center"
             >
               {member.image && (
                 <img

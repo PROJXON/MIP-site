@@ -5,7 +5,7 @@ import projxonMipLogo from '/assets/images/projxon-mip-logo.png';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="border-t border-gray-800 bg-black px-4 py-8">
+    <footer className="border-t border-gray-800 px-4 py-8">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-center justify-between gap-8">
         {/* Left: Logo & Legal & Copyright */}
         <div className="flex flex-col items-center md:items-start justify-end">

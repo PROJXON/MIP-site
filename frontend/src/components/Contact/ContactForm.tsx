@@ -52,7 +52,7 @@ function ContactForm({ Input, role }: ContactFormProps): JSX.Element {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-gray-900 rounded-lg p-6 mb-6 h-[600px] flex flex-col w-[500px]"
+      className="bg-[#424242] rounded-lg p-6 mb-6 h-[600px] flex flex-col w-full md:w-[500px]"
     >
       <input
         type="text"

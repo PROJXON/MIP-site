@@ -28,7 +28,7 @@ export default function Page({
   };
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen text-white">
       {/* Header Banner */}
       <div
         className="relative w-full h-64 flex items-center justify-center mb-10"

@@ -53,10 +53,10 @@ export const Main: React.FC = () => {
   ];
 
   return (
-    <main className="flex-1 bg-black">
+    <main className="flex-1">
       {/* Hero Section */}
       <section
-        className="w-full flex flex-col items-center justify-center py-12 bg-black px-4 relative min-h-[320px]"
+        className="w-full flex flex-col items-center justify-center py-12 px-4 relative min-h-[320px]"
         style={{
           backgroundImage: `url(${mipHome})`,
           backgroundSize: 'cover',
@@ -77,7 +77,7 @@ export const Main: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-12 bg-black px-4">
+      <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           {features.map((feature, i) => (
             <div className="flex flex-col" key={i}>
@@ -96,7 +96,7 @@ export const Main: React.FC = () => {
       </section>
 
       {/* Impact Numbers Section */}
-      <section className="py-5 flex flex-col items-center bg-black px-4">
+      <section className="py-5 flex flex-col items-center px-4">
         <div className="flex flex-wrap justify-center gap-8 text-center">
           {metrics.map((metric, i) => (
             <span
