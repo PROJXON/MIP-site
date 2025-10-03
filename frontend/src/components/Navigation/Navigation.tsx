@@ -7,7 +7,8 @@ export const Navigation: React.FC = () => {
 
   useEffect(() => {
     function closeMobileMenu() {
-      if (window.innerWidth >= 768) setOpen(false);
+      if (window.innerWidth >= 768) 
+        {setOpen(false);}
     }
 
     closeMobileMenu();
