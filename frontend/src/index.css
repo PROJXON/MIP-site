@@ -17,7 +17,7 @@ body {
     'Segoe UI Emoji';
 }
 #root {
-  @apply min-h-screen bg-[#0a0a08];
+  @apply min-h-screen;
 }
 
 .gold-button {
