@@ -37,7 +37,7 @@ export const About: React.FC = () => {
           {team.map((member, i) => (
             <div
               key={i}
-              className="bg-gray-900 rounded-lg p-6 flex flex-col items-center justify-center"
+              className="bg-[#424242] rounded-lg p-6 flex flex-col items-center justify-center"
             >
               {member.image && (
                 <img
