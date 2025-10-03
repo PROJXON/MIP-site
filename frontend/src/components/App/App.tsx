@@ -12,7 +12,7 @@ import BlogPage from '../BlogPage/BlogPage';
 
 function App() {
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col w-full overflow-x-hidden">
+    <div className="min-h-screen text-white flex flex-col w-full overflow-x-hidden">
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />

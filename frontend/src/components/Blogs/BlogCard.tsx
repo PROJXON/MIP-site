@@ -15,7 +15,7 @@ const BlogCard = ({ blog, blogStyle }: { blog: WPBlogPost; blogStyle?: string })
   return (
     <li key={blog.id} data-aos="fade-up" className="max-w-lg w-[400px] mx-auto">
       <div
-        className={`overflow-hidden blog-card h-full border border-yellow-500 ${blogStyle === 'dark' ? 'bg-black' : 'bg-light'}`}
+        className={`overflow-hidden blog-card h-full border border-yellow-500 ${blogStyle === 'dark' ? 'bg-[#0a0a08]' : 'bg-light'}`}
       >
         <a href={`/blogs/${blog.id}`}>
           <img
