@@ -11,25 +11,29 @@ function wpRoute(baseURL, path) {
     const api = axios_1.default.create({
         baseURL: baseURL,
     });
-    router.get('/', async (_req, res) => {
+    router.get('/', async (req, res) => {
         try {
+            const hasFilter = Object.keys(req.query || {}).length > 0;
+            if (hasFilter) {
+                const response = await api.get(path, { params: { ...req.query } });
+                return res.status(200).json(response.data);
+            }
             const allItems = [];
             let page = 1;
             let hasMoreItems = true;
             while (hasMoreItems) {
                 const response = await api.get(path, {
                     params: {
-                        page, // Specify the current page
-                        per_page: 10, // Number of posts per page
+                        page,
+                        per_page: 10,
                     },
                 });
-                allItems.push(...response.data); // Append posts to the result array
-                // If the number of posts is less than the per_page limit, we've reached the end
+                allItems.push(...response.data);
                 const items = response.data;
                 if (items.length < 10)
                     hasMoreItems = false;
                 else
-                    page++; // Move to the next page
+                    page++;
             }
             res.status(200).json(allItems);
         }

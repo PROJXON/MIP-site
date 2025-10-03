@@ -13,6 +13,7 @@ const PORT = process.env.PORT || 5050;
 //adds middleware to the express app
 app.use((0, cors_1.default)({
     origin: [
+        'http://localhost:5173',
         'https://momentuminternshipprogram.com',
         'https://www.momentuminternshipprogram.com'
     ],
