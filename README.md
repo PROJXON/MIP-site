@@ -1,5 +1,11 @@
 ## MIP Website
 
+This is our Momentum Internship Program (MIP) website for PROJXON, live at [MomentumInternshipProgram.com](https://momentuminternshipprogram.com). 
+
+<p align="center">
+  <img src="frontend/public/assets/images/projxon-mip-logo.png" alt="Momentum Internship Program logo" width="220" />
+</p>
+
 ### Overview
 - **Frontend**: React + TypeScript, Vite, Tailwind CSS. Deployed to Amazon S3 (with optional CloudFront).
 - **Backend**: Node.js (TypeScript → tsc), Express API. Deployed on an Ubuntu EC2 instance behind an Elastic IP, managed by PM2.
