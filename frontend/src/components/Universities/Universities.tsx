@@ -57,9 +57,7 @@ export const Universities: React.FC = () => {
           </div>
 
           <div>
-            <h4 className="text-gray-300 pb-4">
-              Northeastern University
-            </h4>
+            <h4 className="text-gray-300 pb-4">Northeastern University</h4>
             <p className="text-gray-300">
               Northeastern University's graduate students, especially from
               top-tier programs like Project Management and Computer Science,
@@ -67,6 +65,16 @@ export const Universities: React.FC = () => {
               like Junior Project Manager, PMO, and Software Engineer, they gain
               hands-on experience while contributing directly to our core
               products.
+            </p>
+          </div>
+          <div>
+            <h4 className="text-gray-300 pb-4">New York University</h4>
+            <p className="text-gray-300">
+              New York University's top-tier talent, from graduate programs like
+              Business Management and Data Sciences, consistently shine in
+              highly technical roles. As AI Analysts and Junior Consultants,
+              they apply cutting-edge academic knowledge to solve real-world
+              challenges, gaining critical project experience in the process.
             </p>
           </div>
         </div>
