@@ -21,13 +21,13 @@ export const About: React.FC = () => {
     <div className="max-w-4xl mx-auto py-12 px-4 text-white">
       {/* Our Approach Section */}
       <section className="mb-12">
-        <h2 className="text-3xl font-bold mb-4 text-yellow-400">Our Approach</h2>
+        <h2 className="text-3xl font-bold mb-4 text-yellow-400">Our Story</h2>
         <p className="text-gray-300">
-          We believe in hands-on, project-based learning. Our Momentum Internship Program (MIP) is
-          built on collaboration, mentorship, and real consulting projects. We partner with
-          companies and universities to ensure every participant gains practical skills, industry
-          insights, and the confidence to excel in their careers. Our approach is flexible,
-          remote-friendly, and tailored to the needs of both interns and organizations.
+          PROJXON was founded with a vision to bridge the gap between academic learning and
+          real-world experience. Our journey began when a group of passionate professionals
+          recognized the need for a platform that empowers young talent and organizations alike.
+          Since then, we've been dedicated to designing innovative internship programs that create
+          future-ready leaders and deliver measurable impact for our partners.
         </p>
       </section>
 
@@ -55,13 +55,13 @@ export const About: React.FC = () => {
 
       {/* Story Section */}
       <section className="mb-12">
-        <h2 className="text-3xl font-bold mb-4 text-yellow-400">Our Story</h2>
+        <h2 className="text-3xl font-bold mb-4 text-yellow-400">Our Approach</h2>
         <p className="text-gray-300">
-          PROJXON was founded with a vision to bridge the gap between academic learning and
-          real-world experience. Our journey began when a group of passionate professionals
-          recognized the need for a platform that empowers young talent and organizations alike.
-          Since then, we've been dedicated to designing innovative internship programs that create
-          future-ready leaders and deliver measurable impact for our partners.
+          We believe in hands-on, project-based learning. Our Momentum Internship Program (MIP) is
+          built on collaboration, mentorship, and real consulting projects. We partner with
+          companies and universities to ensure every participant gains practical skills, industry
+          insights, and the confidence to excel in their careers. Our approach is flexible,
+          remote-friendly, and tailored to the needs of both interns and organizations.
         </p>
       </section>
     </div>
