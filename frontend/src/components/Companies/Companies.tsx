@@ -30,15 +30,15 @@ export const Companies: React.FC = () => {
         'Potential long-term hires',
       ],
     },
-    {
-      id: 'case',
-      heading: 'Case Study',
-      content: {
-        quote:
-          'Our MIP interns delivered a new marketing strategy that increased our engagement by 40%. We hired two of them full-time after the program!',
-        name: 'Satisfied Client',
-      },
-    },
+    // {
+    //   id: 'case',
+    //   heading: 'Case Study',
+    //   content: {
+    //     quote:
+    //       'Our MIP interns delivered a new marketing strategy that increased our engagement by 40%. We hired two of them full-time after the program!',
+    //     name: 'Satisfied Client',
+    //   },
+    // },
     {
       id: 'faq',
       heading: 'FAQ for Clients',

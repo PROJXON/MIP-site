@@ -3,6 +3,7 @@ import goldNotecard from '/assets/images/gold-notecard.jpg';
 import type { ImageLink, PageSection } from '../../types';
 import PageGoldButton from '../PageGoldButton/PageGoldButton';
 import Page from '../Page/Page';
+import Testimonials from '../Testimonials/Testimonials';
 
 export const Candidates: React.FC = () => {
   const sections: (PageSection | PageSection[])[] = [
@@ -37,14 +38,19 @@ export const Candidates: React.FC = () => {
         ],
       },
     ],
+    // {
+    //   id: '#voices',
+    //   heading: 'Intern Voices',
+    //   content: {
+    //     quote:
+    //       'Momentum gave me the confidence and skills to succeed in my first job after graduation.',
+    //     name: 'Former Intern',
+    //   },
+    // },
     {
-      id: '#voices',
-      heading: 'Intern Voices',
-      content: {
-        quote:
-          'Momentum gave me the confidence and skills to succeed in my first job after graduation.',
-        name: 'Former Intern',
-      },
+      id: '#testimonials',
+      heading: '',
+      content: <Testimonials />,
     },
     {
       id: '#faq',

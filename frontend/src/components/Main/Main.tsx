@@ -1,5 +1,4 @@
 import React from 'react';
-import Testimonials from '../Testimonials/Testimonials';
 import Blogs from '../Blogs/Blogs';
 import mipHome from '/assets/images/mip-home.jpg';
 import GoldButton from '../GoldButton/GoldButton';
@@ -99,7 +98,6 @@ export const Main: React.FC = () => {
         </div>
       </section>
 
-      <Testimonials />
       <Blogs />
 
       {/* Tailwind Custom Animation */}

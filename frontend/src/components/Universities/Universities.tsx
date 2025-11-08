@@ -109,7 +109,7 @@ export const Universities: React.FC = () => {
     <Page
       hero={{
         pic: japaneseFight as ImageLink,
-        h1: "Industry-integrated learning that works",
+        h1: "Industry-Integrated Learning That Works",
         h2: "Bring applied experience to your students",
       }}
       sections={sections}
