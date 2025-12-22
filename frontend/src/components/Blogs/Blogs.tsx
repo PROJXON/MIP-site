@@ -10,6 +10,10 @@ export default function Blogs() {
 
   return (
     <div>
+      <h2 className="text-yellow-500 text-3xl font-semibold text-center my-10">
+        Participants
+      </h2>
+
       {loading ? (
         <LoadingSpinner />
       ) : blogs.length > 0 ? (

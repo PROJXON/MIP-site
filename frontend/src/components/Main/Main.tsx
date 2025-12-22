@@ -1,34 +1,14 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import Testimonials from '../Testimonials/Testimonials';
+import React from 'react';
 import Blogs from '../Blogs/Blogs';
 import mipHome from '/assets/images/mip-home.jpg';
 import GoldButton from '../GoldButton/GoldButton';
 
 export const Main: React.FC = () => {
-  // For animated impact numbers
-  const metrics = useMemo(
-    () => [
-      { label: '200+ Interns Trained' },
-      { label: '84% Conversion' },
-      { label: '25 Partner Campuses' },
-      { label: '14 Industries' },
-    ],
-    []
-  );
-  const [showMetrics, setShowMetrics] = useState([false, false, false, false]);
-
-  useEffect(() => {
-    // Animate metrics one after another
-    metrics.forEach((_, i) => {
-      setTimeout(() => {
-        setShowMetrics((prev) => {
-          const updated = [...prev];
-          updated[i] = true;
-          return updated;
-        });
-      }, 400 * i);
-    });
-  }, [metrics]);
+  const metrics = [
+    '200+ Interns Trained',
+    '25 Partner Campuses',
+    '14 Industries',
+  ];
 
   const features = [
     {
@@ -63,9 +43,7 @@ export const Main: React.FC = () => {
           backgroundPosition: 'center',
         }}
       >
-        {/* Overlay */}
         <div className="absolute inset-0 bg-black opacity-70 z-0"></div>
-        {/* Content */}
         <div className="relative z-10 flex flex-col items-center">
           <h2 className="text-3xl md:text-4xl font-semibold mb-4 text-center text-yellow-500">
             Accelerate Talent, Elevate Impact
@@ -95,24 +73,48 @@ export const Main: React.FC = () => {
         </div>
       </section>
 
-      {/* Impact Numbers Section */}
-      <section className="py-5 flex flex-col items-center px-4">
-        <div className="flex flex-wrap justify-center gap-8 text-center">
-          {metrics.map((metric, i) => (
-            <span
-              key={metric.label}
-              className={`text-2xl md:text-3xl font-bold text-yellow-500 transition-opacity duration-700 ${showMetrics[i] ? 'opacity-100' : 'opacity-0'}`}
-              style={{ transitionDelay: `${i * 300}ms` }}
-            >
-              {metric.label}
-            </span>
-          ))}
+      {/* Sliding Metrics Section */}
+      <section className="py-10 px-4 overflow-hidden">
+        <div className="relative w-full">
+          <div className="animate-marquee whitespace-nowrap flex gap-12">
+            {metrics.map((metric, i) => (
+              <span
+                key={i}
+                className="text-4xl md:text-5xl font-extrabold text-yellow-500"
+              >
+                {metric}
+              </span>
+            ))}
+            {/* Duplicate for seamless looping */}
+            {metrics.map((metric, i) => (
+              <span
+                key={`dup-${i}`}
+                className="text-4xl md:text-5xl font-extrabold text-yellow-500"
+              >
+                {metric}
+              </span>
+            ))}
+          </div>
         </div>
       </section>
 
-      <Testimonials />
-
       <Blogs />
+
+      {/* Tailwind Custom Animation */}
+      <style jsx>{`
+        @keyframes marquee {
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        .animate-marquee {
+          display: inline-flex;
+          animation: marquee 20s linear infinite;
+        }
+      `}</style>
     </main>
   );
 };
