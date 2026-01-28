@@ -101,7 +101,7 @@ export const Main: React.FC = () => {
       <Blogs />
 
       {/* Tailwind Custom Animation */}
-      <style jsx>{`
+      <style>{`
         @keyframes marquee {
           0% {
             transform: translateX(0%);
