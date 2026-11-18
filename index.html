@@ -217,12 +217,23 @@ header{
 @media (max-width:760px){.stack{grid-template-columns:1fr 1fr}}
 
 /* ---------- voices ---------- */
-.voices{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
-.voice{border:1px solid var(--line);border-radius:14px;padding:26px 24px;background:var(--card)}
-.voice blockquote{margin:0 0 20px;font-size:1.02rem;line-height:1.55}
-.who{font-size:.88rem;color:var(--muted);line-height:1.45}
-.who b{display:block;color:var(--ink);font-size:.96rem;font-variation-settings:'wght' 650}
+.voices{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px;align-items:stretch}
+.voice{
+  border:1px solid var(--line);border-radius:14px;padding:26px 24px;background:var(--card);
+  display:flex;flex-direction:column;
+}
+.voice blockquote{margin:0 0 22px;font-size:.99rem;line-height:1.55;flex:1}
+.who{
+  font-size:.86rem;color:var(--muted);line-height:1.4;
+  display:flex;align-items:center;gap:12px;
+}
+.who b{display:block;color:var(--ink);font-size:.95rem;font-variation-settings:'wght' 650}
+.face{
+  width:44px;height:44px;border-radius:50%;object-fit:cover;flex:none;
+  background:var(--sunk);border:1px solid var(--line);
+}
 @media (max-width:900px){.voices{grid-template-columns:1fr}}
+@media (min-width:901px) and (max-width:1100px){.voices{grid-template-columns:repeat(2,1fr)}}
 
 /* ---------- faq ---------- */
 .faq{margin-top:40px;border-top:1px solid var(--line)}
@@ -272,6 +283,7 @@ footer a:hover{color:#fff}
       <a href="#culture">Culture</a>
       <a href="#value">Value</a>
       <a href="#results">Results</a>
+      <a href="#partner">Partner</a>
       <a href="#questions">Questions</a>
     </nav>
     <div class="navtools">
@@ -419,20 +431,56 @@ footer a:hover{color:#fff}
     <p class="label">In their words</p>
     <h2>What people say once they are through it.</h2>
     <div class="voices">
+
       <div class="voice">
-        <blockquote>“I came in as a designer and left having run a project end to end. Nobody told me I was not allowed in the room.”</blockquote>
-        <p class="who"><b>Placeholder name</b>Marketing team · now at a placeholder company</p>
+        <blockquote>“PROJXON helps companies grow, while the internship program helps its interns develop into competent, knowledgeable professionals. Throughout this experience, I have become more collaborative, communicative, detail-oriented, and creative.”</blockquote>
+        <div class="who">
+          <img class="face" src="assets/1720771445682-1.jpg" alt="" width="96" height="96" loading="lazy">
+          <div><b>Jordan Lee</b>Human Resources Intern</div>
+        </div>
       </div>
+
       <div class="voice">
-        <blockquote>“The first meeting I led was in week two. That would not have happened anywhere else I applied.”</blockquote>
-        <p class="who"><b>Placeholder name</b>Operations team · now at a placeholder company</p>
+        <blockquote>“Participating in the MIP has been a pivotal experience, enhancing my project management skills and deepening my understanding of strategic planning. The hands-on projects and collaborative environment have significantly contributed to my professional growth and readiness for future challenges.”</blockquote>
+        <div class="who">
+          <img class="face" src="assets/1722533482976-1.jpg" alt="" width="96" height="96" loading="lazy">
+          <div><b>Noemi Nagy</b>Program Development and Management Intern</div>
+        </div>
       </div>
+
       <div class="voice">
-        <blockquote>“I was transitioning out of the service and needed to prove I could do the work. The portfolio I built here is what got me hired.”</blockquote>
-        <p class="who"><b>Placeholder name</b>IT team · now at a placeholder company</p>
+        <blockquote>“The MIP is a great opportunity to learn about working in a professional environment. Everyone is very supportive, helpful, and very knowledgeable.”</blockquote>
+        <div class="who">
+          <img class="face" src="assets/1728055420113-1.jpg" alt="" width="96" height="96" loading="lazy">
+          <div><b>Daniele Cragle</b>Senior Graphic Designer</div>
+        </div>
       </div>
+
+      <div class="voice">
+        <blockquote>“My MIP experience has been transformative, providing hands-on experience in project management and web development while working alongside industry professionals who have helped me bridge the gap between academic knowledge and real-world application through meaningful project contributions and continuous mentorship.”</blockquote>
+        <div class="who">
+          <img class="face" src="assets/1713111899968-1.jpg" alt="" width="96" height="96" loading="lazy">
+          <div><b>Shrinkhala Sharma</b>UX/UI Team Lead</div>
+        </div>
+      </div>
+
+      <div class="voice">
+        <blockquote>“The MIP has provided me with invaluable hands-on experience in project management, allowing me to develop critical skills in data tracking and team collaboration. This program has been instrumental in bridging the gap between academic learning and real-world application, preparing me for future career success.”</blockquote>
+        <div class="who">
+          <img class="face" src="assets/1735877135692-1.jpg" alt="" width="96" height="96" loading="lazy">
+          <div><b>Shweta Singh</b>Project Management Intern</div>
+        </div>
+      </div>
+
+      <div class="voice">
+        <blockquote>“I have learned more in 3 months as web developer here than I did in a year of self study. PROJXON gives you the opportunity and resources to really focus on real world problems to boost your experience. I am immensely grateful for the opportunity provided here and confident I have the skills for what comes in my future!”</blockquote>
+        <div class="who">
+          <img class="face" src="assets/headshot-1-1.webp" alt="" width="96" height="96" loading="lazy">
+          <div><b>Evan Perry</b>Web Developer Intern</div>
+        </div>
+      </div>
+
     </div>
-    <p class="flag">Real testimonials replace these as marketing collects them. Every page will carry one matched to its topic.</p>
   </div>
 </section>
 
@@ -465,14 +513,41 @@ footer a:hover{color:#fff}
   </div>
 </section>
 
+<section id="partner" style="background:var(--sunk)">
+  <div class="wrap">
+    <p class="label">Partnership</p>
+    <h2>If you place people, we are the next step.</h2>
+    <p class="lede" style="margin-top:20px">Most of our participants arrive through someone: a university, a workforce development programme, a transition office. Here is what that looks like from your side.</p>
+
+    <div class="cols">
+      <div class="col">
+        <h3>Universities</h3>
+        <p>Students join a working team rather than shadowing one, and leave with a portfolio, references and a professional network. We work with institutions on academic credit, and on CPT and OPT arrangements where those apply. Tell us early and we will provide whatever documentation your office needs.</p>
+      </div>
+      <div class="col">
+        <h3>Workforce development</h3>
+        <p>For programmes moving people into professional roles, the gap is rarely ability. It is the absence of recent, verifiable work. Participants here do real client and internal projects with named owners, which is the evidence that gap needs.</p>
+      </div>
+      <div class="col">
+        <h3>Military and transition</h3>
+        <p>Transitioning service members and military spouses are a standing part of our intake. The programme is remote and runs on rolling cohorts, which tends to fit around relocation and separation timelines better than a fixed-date internship.</p>
+      </div>
+    </div>
+
+    <div class="cta" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:40px">
+      <a class="btn btn-ink" href="#apply">Talk to us about partnering</a>
+    </div>
+  </div>
+</section>
+
 <section class="apply" id="apply">
   <div class="wrap">
     <p class="label" style="color:var(--hero-muted)">Apply</p>
     <h2>Cohorts are rolling. Places are not unlimited.</h2>
     <p class="lede">If you have read this far, you already know whether it fits. The application takes a few minutes.</p>
     <div class="cta">
-      <a class="btn btn-gold" href="#">Apply now</a>
-      <a class="btn btn-ghost" href="#">Partner with us</a>
+      <a class="btn btn-gold" href="https://app.dover.com/jobs/projxon">Apply now</a>
+      <a class="btn btn-ghost" href="#partner">Partner with us</a>
     </div>
     <p class="heronote">Universities and workforce development partners, get in touch about placements and credit.</p>
   </div>
@@ -499,7 +574,7 @@ footer a:hover{color:#fff}
         <h4>Get started</h4>
         <ul>
           <li><a href="#apply">Apply</a></li>
-          <li><a href="#apply">Partner with us</a></li>
+          <li><a href="#partner">Partner with us</a></li>
           <li><a href="#questions">Questions</a></li>
           <li><a href="#">LinkedIn</a></li>
         </ul>
